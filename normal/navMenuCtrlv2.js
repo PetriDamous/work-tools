@@ -339,11 +339,11 @@ $(document)
             else{ cpCmndMute = false } 
         }
 
-        //Hides and shows play and pause
+        // Hides and shows play and pause
         function hidePlay(){
-            //hide play
+            // hide play
             cp.hide(playID);
-            //show pause
+            // show pause
             cp.show(pauseID);     
         }
 
@@ -354,39 +354,38 @@ $(document)
             stayMute();                      
         }
          
-        //Closes TOC and shows pause button when new slide is entered
+        // Closes TOC and shows pause button when new slide is entered
         cpAPIEventEmitter.addEventListener("CPAPI_SLIDEENTER", slideRest);
 
         //////////////////////Nav bar control/////////////////////////////
 
-        //Pause
+        // Pause
         $(btnPause).click(function(){
-            //Note: In this project I had to subtract 1 from lastFrame(last frame in slide). 
-            //All slides in this project stop on second to last frame of slide for some reason
+            // Note: In this project I had to subtract 1 from lastFrame(last frame in slide). 
+            // All slides in this project stop on second to last frame of slide for some reason
             console.log("pause clicked")
             if(cpInfoCurrentFrame === (lastFrame - 1)){          
                 cpCmndPause = true;
             }
             else{
                 cpCmndPause = true;
-                //hide pause button
+                // hide pause button
                 cp.hide(pauseID);	
-                //show play button
+                // show play button
                 cp.show(playID);                        		
             }
         });
 
-        //Play
+        // Play
         $(btnPlay).click(function(){
-            console.log("click")
-            //Resumes play
-            function resumePlay(){
-                cpCmndResume = true;
-                console.log("resumePlay");
+            
+            // Resumes play
+            function resumePlay () {
+                cpCmndResume = true;                
             } 
 
             if(cpCmndTOCVisible == true){
-                //Hides TOC
+                // Hides TOC
                 cpCmndTOCVisible = false;
                 resumePlay();
                 hidePlay();
@@ -399,7 +398,7 @@ $(document)
             }
         });
 
-        //Rewind
+        // Rewind
         $(btnRewind).click(function(){
             //////////////////////////////////// Controls the rewinding of a slide ///////////////////////////////            
             
@@ -418,7 +417,7 @@ $(document)
             	}
         });
 
-        //Replay button
+        // Replay button
         $(btnReplay).click(function(){
             // cpCmndGotoFrameAndResume = firstFrame;
             cpCmndGotoFrame = firstFrame;
@@ -431,7 +430,7 @@ $(document)
             
             
             if(cpCmndTOCVisible == true){
-                //Hides TOC
+                // Hides TOC
                 cpCmndTOCVisible = false;
                 hidePlay();
                 stayMute();
@@ -442,7 +441,7 @@ $(document)
             }
         });
 
-        //Mute        
+        // Mute        
         $(btnMute).click(function(){
             cpCmndMute = true; 
             cp.hide(muteID);
@@ -451,17 +450,17 @@ $(document)
         
 
 
-        //Unmute
+        // Unmute
         $(btnUnmute).click(function(){
             cpCmndMute = false;            
             cp.hide(unmuteID);
             cp.show(muteID);       
         });
 
-        //Previous button
+        // Previous button
         $(btnPrev).click(function(){ slideRest(); });
 
-        //Next
+        // Next
         $(btnNext).click(function(){ slideRest(); });
         
         // CC button
@@ -495,23 +494,23 @@ $(document)
 
         ccToolTip();        
 
-        /////////////////Menu Button Controls////////////////         
+        ///////////////// Menu/TOC Button Controls ////////////////         
            
-        //Menu Funcitons
+        // Menu Funcitons
 
-        //Controls TOC height
+        // Controls TOC height
 
         $('#tocFooter').css('top', tocFooter);
         $('#tocContent').css('height', tocContent);
         $('#toc').css('height', toc);
 
-        //Controls opening of TOC
+        // Controls opening of TOC
         function openToc(){
         	cpCmndTOCVisible = true;
             cpCmndPause = true;            	
         }
 
-        //Controls closing of TOC
+        // Controls closing of TOC
         function closeToc(lastFrame){
         	if(lastFrame == true){
         		cpCmndPause = true;
@@ -523,40 +522,40 @@ $(document)
         	}	
         }
 
-        //Controals which icon should be shown for play and pause
+        // Controals which icon should be shown for play and pause
         function playOrPause(value){
         	if(value == true){
-        		//show play button
+        		// show play button
         		cp.show(playID);
-        		//hide pause button
+        		// hide pause button
         		cp.hide(pauseID);			
         	}
         	else{
-        		//hide play
+        		// hide play
         		cp.hide(playID);
-        		//show pause
+        		// show pause
         		cp.show(pauseID);	
         	}
         }
 
         $(btnMenu).click(function(){
-            //Opens TOC on last frame
+            // Opens TOC on last frame
             if(cpInfoCurrentFrame == (lastFrame - 1) && cpCmndTOCVisible == false){ 
             	openToc(); 
             	playOrPause(false);
             }
-            //Closes TOC on last frame
+            // Closes TOC on last frame
             else if(cpInfoCurrentFrame == (lastFrame - 1) && cpCmndTOCVisible == true){ 
             	closeToc(true); 
             	playOrPause(false);
             	stayMute();   
             }
-            //Opens TOC when not on last frame
+            // Opens TOC when not on last frame
             else if(cpCmndTOCVisible == false){		
             	openToc();
             	playOrPause(true);	
             }
-            //Closes TOC when not on last frame
+            // Closes TOC when not on last frame
             else{
             	closeToc(false);
             	playOrPause(false);
@@ -845,4 +844,3 @@ $(document)
             }
         }        
     });
-    
