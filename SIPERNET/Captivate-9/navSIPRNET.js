@@ -1,45 +1,46 @@
 $(document)
     .ready(function() {
-        
+        console.log('ready');
         ///////////// Used to check for browser type ////////////////////////////////
         var isFirefox = typeof InstallTrigger !== 'undefined';
         var isIE = /*@cc_on!@*/false || !!document.documentMode;
         var isEdge = !isIE && !!window.StyleMedia;
-        var isChrome = navigator.webkitGetUserMedia;  
+        var isChrome = navigator.webkitGetUserMedia; 
+        
+        cpCmndShowPlaybar = false;
         
         /////////////// Component Properties ///////////////////////////
         
         // Turns Progress bar on and off
-        var progress = false;
+        var progress = true;
 
         // Turns Timer on and off
-        var timer = false;
-        
-        // Controls the amount of time for rewind feature
-        var rewindTime = 90;
+        var timer = true;
 
-        // Controls TOC height
-        var tocFooter = '585px';
-        var tocContent = '509px';
-        var toc = '605px';
+        // Controls position of CC text box
+        var ccLeft = '0px';
+        var ccBottom = '83px';
+        var ccWidth = '960px';
+        var ccHeight = '40px';
 
         // Controls position of progress bar
-        var proPos = 'absolute';
-        var proTop = '87%';
-        var proLeft = '6%';
-        var proWidth = '1123px';
+        var proPos = 'absolute';        
+        var proTop = '91.4%';
+        var proLeft = '0px';        
+        var proWidth = '960px';
         var proHeight = '5px';
+        var proZindex = '2';
 
         // Controls position of duration timer and color
         var durationTimePos = 'absolute';
-        var durationTimeTop = '95%';
-        var durationTimeLeft = '85%';
+        var durationTimeTop = '95.7%';
+        var durationTimeLeft = '68%';
         var durationTimeColor = 'white';
 
         // Controls position of current time timer and color
         var currentTimePos = 'absolute';
-        var currentTimeTop = '95%';
-        var currentTimeLeft = '9%';
+        var currentTimeTop = '95.7%';
+        var currentTimeLeft = '39%';
         var currentTimeColor = 'white';
 
         // Progress Bar styles
@@ -263,130 +264,106 @@ $(document)
         var slideAudio = currentSlide.audioName;        
         
         /////////////////////// Tool tips, Elements, ID ///////////////////////////////////////
+        ////////////////////// 1 - Grabs GUI element    //////////////////////////////////////
+        /////////////////////  2 - Sets Tool Tip        /////////////////////////////////////
+        ////////////////////   3 - Grabs GUI element ID ////////////////////////////////////
 
-        var toolTipArray = [
-            "Pause",
-            "Play",
-            "Closed Caption",
-            "Mute",
-            "Unmute",
-            "Replay",
-            "Rewind",
-            "Previous",
-            "Next",
-            "Menu",
-            "Help",
-            "Options",
-            "Exit",
-            "Resources"
-        ];
-
-
-        toolTipArray.forEach(function(elm, idx) {          
-            var setDataAttr;
-
-            if (isIE) {                
-                setDataAttr = $("p:contains(" + toolTipArray[idx] + ")" ).parent().parent();
-                
-            } else {
-                setDataAttr = $('div[aria-label="' + toolTipArray[idx] + " " + '"]');
-            }
-            
-            setDataAttr.attr("data-button", toolTipArray[idx]);
-            setDataAttr.attr("title", toolTipArray[idx]);
-            setDataAttr.css("cursor", "pointer");                      
-            
-        });
-
-
-        /////////////////////// Nav bar funtions ////////////////////////////
+        var btnPause = $("p:contains(Pause)").parent().parent();
+        btnPause.prop("title", "Pause");        
+        var pauseID = "" + btnPause.attr("id");
         
-        // When mute is on keeps audio muted on slide change
-        function stayMute(){ 
-            if(cpCmndMute == true){ 
-                cpCmndMute = true; 
-            }
-            else{ cpCmndMute = false } 
-        }
+        var btnPlay = $("p:contains(Play)").parent().parent();
+        btnPlay.prop("title", "Play");
+        var playID = "" + btnPlay.attr("id");
+        var playElm = document.getElementById(playID);              
 
-        // Hides and shows play and pause
-        function hidePlay(){
-            // hide play            
-            cp.hide(getElement("Play", "id"));
-            // show pause
-            cp.show(getElement("Pause", "id"));                
-        }
+        var btnCC = $("p:contains(Closed Caption)").parent().parent();
+        btnCC.prop("title", "Closed Caption");        
 
-        // Rests UI controls when entering new slide
-        function slideRest(){
-            cpCmndTOCVisible = false;
-            cp.show(getElement("Pause", "id"));
-            cp.hide(getElement("Play", "id"));
-            stayMute();
-        }        
-         
-        slideRest();        
+        var btnMute = $("p:contains(Mute)").parent().parent();
+        btnMute.prop("title", "Mute");        
+        var muteID = "" + btnMute.attr("id");                
+
+        var btnUnmute = $("p:contains(Unmute)").parent().parent();
+        btnUnmute.prop("title", "Unmute");        
+        var unmuteID = "" + btnUnmute.attr("id");
+        var unmuteElm = document.getElementById(unmuteID);
+
+        var btnReplay = $("p:contains(Replay)").parent().parent();
+        btnReplay.prop("title", "Replay");        
+
+        var btnPrev = $("p:contains(Previous)").parent().parent();
+        btnPrev.prop("title", "Previous");     
+
+        var btnNext = $("p:contains(Next)").parent().parent();
+        btnNext.prop("title", "Next");  
+   
+        ///////////////////////// Nav bar funtions ////////////////////////////
 
         // Closes TOC and shows pause button when new slide is entered
         cpAPIEventEmitter.addEventListener("CPAPI_SLIDEENTER", slideRest);
+        
+        if ((playElm !== null || playElm !== undefined) && playElm.style.visibility !== 'hidden') {
+            cp.hide(playID)
+        }
 
-        //////////////////////Nav bar control/////////////////////////////
+        if ((unmuteElm !== null || unmuteElm !== undefined) && unmuteElm.style.visibility !== 'hidden') {
+            cp.hide(unmuteID);
+        }
 
-        customSettings();
-
-        // Pause        
-        $(getElement("Pause", "obj")).click(function(){
-            if (cpInfoCurrentFrame < (lastFrame - 1)) {
-                cpCmndPause = true;                
-                cp.hide(getElement("Pause", "id"));
-                cp.show(getElement("Play", "id"));
-            } else {
-                cpCmndPause = true;                
+        // When mute is on keeps audio muted on slide change
+        function unMute() { 
+            if (cpCmndMute == true) { 
+                cpCmndMute = false;              
             }
-        });
+        }
 
-        // Play        
-        $(getElement("Play", "obj")).click(function(){
-            if(cpInfoCurrentSlideLabel === "Intro Video") {
-                cp.hide("SmartShape_114");
-                cp.hide("Image_372");
-                cp.hide("Image_371");
-                cp.hide("Image_370");
-            } 
+        // Hides and shows play and pause
+        function hidePlay() {            
+            cp.hide(playID);            
+            cp.show(pauseID);     
+        }
 
-            if (cpInfoCurrentFrame < (lastFrame - 1)) {              
-                cpCmndResume = true;
-                hidePlay();
-                stayMute();                
-            } else {
+        // Rests UI controls when entering new slide
+        function slideRest() {            
+            cp.show(pauseID);
+            cp.show(muteID);  
+            unMute();
+        }         
+
+        ////////////////////// Nav bar control /////////////////////////////
+
+        // Pause
+        $(btnPause).click(function(){
+            // Note: In this project I had to subtract 1 from lastFrame(last frame in slide). 
+            // All slides in this project stop on second to last frame of slide for some reason
+            
+            if(cpInfoCurrentFrame >= (lastFrame - 1)){          
                 cpCmndPause = true;
-                hidePlay();                 
-            }   
-
-        });
-
-        // Rewind        
-        $(getElement("Rewind", "obj")).click(function(){
-            //////////////////////////////////// Controls the rewinding of a slide ///////////////////////////////            
-            
-            if(cpInfoCurrentFrame != firstFrame && cpInfoCurrentFrame > (firstFrame + rewindTime)){
-                cpCmndGotoFrameAndResume = cpInfoCurrentFrame - rewindTime;
-                hidePlay();
-                stayMute();
-                cpCmndTOCVisible = false;       
-            	}
-            
+            }
             else{
-                cpCmndGotoFrameAndResume = firstFrame
-                hidePlay();
-                stayMute();
-                cpCmndTOCVisible = false;        			
-            	}
+                cpCmndPause = true;
+                // hide pause button
+                cp.hide(pauseID);	
+                // show play button
+                cp.show(playID);                        		
+            }            
         });
 
-        // Replay button        
-        $(getElement("Replay", "obj")).click(function(){
-            // cpCmndGotoFrameAndResume = firstFrame;
+        // Play
+        $(btnPlay).click(function() {
+            if (cpInfoCurrentFrame >= (lastFrame - 1)) {
+                cpCmndPause = true;
+                hidePlay(); 
+            } else {
+                cpCmndResume = true;
+                hidePlay();                
+            }                       
+        });
+        
+        // Replay button
+        $(btnReplay).click(function(){
+            
             cpCmndGotoFrame = firstFrame;
             
             if (cpCmndPause) {
@@ -395,172 +372,69 @@ $(document)
                 }, 300);
             }            
             
-            
-            if(cpCmndTOCVisible == true){
-                // Hides TOC
-                cpCmndTOCVisible = false;
-                hidePlay();
-                stayMute();
-            }
-            else{ 
-                hidePlay();
-                stayMute(); 
-            }
+            hidePlay();
         });
 
-        // Mute              
-        $(getElement("Mute", "obj")).click(function(){
+        // Mute        
+        $(btnMute).click(function(){
             cpCmndMute = true; 
             cp.hide(muteID);
             cp.show(unmuteID);       
         });
 
-        // Unmute          
-        $(getElement("Unmute", "obj")).click(function(){
+        // Unmute
+        $(btnUnmute).click(function(){
             cpCmndMute = false;            
             cp.hide(unmuteID);
             cp.show(muteID);       
+        });        
+
+        // Previous button
+        $(btnPrev).click(function(){
+            cpCmndPrevious = 1;                        
+        });
+
+        // Next
+        $(btnNext).click(function(){ 
+            cpCmndNextSlide = 1; 
         });
         
         // CC button
         function ccToolTip(){
-            if (cpCmndCC === 0) {                
-                $(getElement("Closed Caption", "obj")).attr("title", "Closed Caption Open");         
+            if (cpCmndCC == false) {
+                $(btnCC).prop("title", "Closed Caption Open");         
                } else if (cpCmndCC == true) {
-                $(getElement("Closed Caption", "obj")).attr("title", "Closed Caption Close");
-            
+                $(btnCC).prop("title", "Closed Caption Close");
+
+                $("#cc").css({
+                    "left": ccLeft, 
+                    "bottom": ccBottom, 
+                    "width": ccWidth,
+                    "height": ccHeight
+                });
+
                 cp.hide('ccClose');
                }
         }
 
-        $(getElement("Closed Caption", "obj")).click(function() {
-
-            if (cpCmndCC === 0) {
-                cpCmndCC = 1;
+        $(btnCC).click(function(){
+            if(cpCmndCC == false){
+                cpCmndCC = true;
                 ccToolTip();
-               
-            } else {               
-                cpCmndCC = 0;
+            } 
+            else if(cpCmndCC == true){
+                cpCmndCC = false;
                 ccToolTip();
-                
             }
-       
         });
 
-        ccToolTip();        
-
-        ///////////////// Menu/TOC Button Controls ////////////////         
-           
-        // Menu Funcitons
-
-        // Controls TOC height
-
-        $('#tocFooter').css('top', tocFooter);
-        $('#tocContent').css('height', tocContent);
-        $('#toc').css('height', toc);
-       
-        $(getElement("Menu", "obj")).click(function(){
-            
-            if(cpInfoCurrentSlideLabel === "Pre-Test" || cpInfoCurrentSlideLabel === "Pre-Test Results") {
-                return;
-            } else {
-                if (cpCmndTOCVisible == false) {
-                    cpCmndTOCVisible = true;
-                } else {
-                    cpCmndTOCVisible = false;
-                }
-            }           
-
-        });
-        
-
-        /////////////////// Utility Functions ////////////////////////
-        
-        // Grabs element
-        function getElement (attribute, property) {
-
-            return property === "obj" ?  $('div[data-button="' + attribute + '"]') : $('div[data-button="' + attribute + '"]').attr("id");            
-        }
-
-        // Custome settings for cousrse lessons
-        function customSettings () {            
-  
-            if(cpInfoCurrentSlideLabel === "Intro Video") {
-                cp.show("SmartShape_114");
-                cp.show("Image_372");
-                cp.show("Image_371");
-                cp.show("Image_370");
-                cp.show(getElement("Play", "id"));
-                cp.hide(getElement("Pause", "id"));
-                cpCmndPause = true;
-            }
-
-
-            if (cpInfoCurrentSlideLabel === "Pre-Test") {
-                cp.hide(getElement("Play", "id"));
-                cp.hide(getElement("Pause", "id"));
-                disableMenu();              
-            }
-            
-
-            if (cpInfoCurrentSlideLabel === "Pre-Test Results") {
-                disableMenu();
-            }
-            
-            function disableMenu () {
-                var menuBtn = document.querySelectorAll('div[title="Menu"]');               
-
-                for (var i = 0; i < menuBtn.length; i++) {                    
-                    var menuItemCanvas = document.getElementById(menuBtn[i].id + "c");                    
-                    menuItemCanvas.style.opacity = ".5";
-                    menuBtn[i].style.cursor = "not-allowed";
-                } 
-            }
-
-        }
-
-        // Custome settings for cousrse lessons
-        function customSettings () {            
-            if(cpInfoCurrentSlideLabel === "Intro Video") {
-                cp.show("SmartShape_114");
-                cp.show("Image_372");
-                cp.show("Image_371");
-                cp.show("Image_370");
-                cp.show(getElement("Play", "id"));
-                cp.hide(getElement("Pause", "id"));
-                cpCmndPause = true;
-            }
-
-
-            if (cpInfoCurrentSlideLabel === "Pre-Test") {
-                cp.hide(getElement("Play", "id"));
-                cp.hide(getElement("Pause", "id"));
-                disableMenu();              
-            }
-            
-
-            if (cpInfoCurrentSlideLabel === "Pre-Test Results") {
-                disableMenu();
-            }
-            
-            function disableMenu () {
-                var menuBtn = document.querySelectorAll('div[title="Menu"]');               
-
-                for (var i = 0; i < menuBtn.length; i++) {                    
-                    var menuItemCanvas = document.getElementById(menuBtn[i].id + "c");                    
-                    menuItemCanvas.style.opacity = ".5";
-                    menuBtn[i].style.cursor = "not-allowed";
-                } 
-            }
-
-        }
-
+        ccToolTip();
 
         // Removes progress bar and timer from Learning Check slides and slides with no audio
 
-        var slideLabel = cpInfoCurrentSlideLabel.slice(0, 14);        
+        var slideLabel = cpInfoCurrentSlideLabel;       
 
-        if (slideLabel === 'Learning Check' || !slideAudio) {
+        if (slideLabel === 'Check on Learning' || !slideAudio) {
             progress = false;
             timer = false;
         }
@@ -583,15 +457,15 @@ $(document)
             
             
             // Places Progress Bar on slide
-            $("#div_Slide").append(playBar);
-
+            $("#div_Slide").append(playBar);            
+            
             // Positions Progress Bar            
             $('#seekerBar').css({
                 'position': proPos, 
                 'top': proTop, 
                 'left': proLeft,
                 'width': proWidth,                
-                'z-index': 3000,
+                'z-index': proZindex,
                 'height': proHeight                
             });
 
@@ -605,27 +479,7 @@ $(document)
             
             cpAPIEventEmitter.addEventListener("CPAPI_VARIABLEVALUECHANGED", seekUpdate, "cpInfoCurrentFrame");
 
-            function seekUpdate() { playBar.valueAsNumber = cpInfoCurrentFrame; }  
-
-
-            // https://www.w3.org/wiki/Dynamic_style_-_manipulating_CSS_with_JavaScript
-
-
-            // Progress Bar rewind
-            
-            /*if (isIE) {				
-                seekerBar.addEventListener("change", vidSeek, false);						
-            } else {
-                seekerBar.addEventListener("input", vidSeek, false);
-            } 
-
-            function vidSeek() {            
-                 if (playBar.valueAsNumber < cpInfoCurrentFrame) {
-                    cpCmndGotoFrameAndResume = playBar.valueAsNumber
-                } else {
-                    playBar.valueAsNumber = cpInfoCurrentFrame
-                }
-            }*/
+            function seekUpdate() { playBar.valueAsNumber = cpInfoCurrentFrame; }
             
         }
 
