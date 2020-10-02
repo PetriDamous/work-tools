@@ -480,43 +480,7 @@ $(document).ready(function() {
 
             return property === "obj" ?  $('div[data-button="' + attribute + '"]') : $('div[data-button="' + attribute + '"]').attr("id");            
         }
-
-        // Custome settings for cousrse lessons
-        function customSettings () {            
-  
-            if(cpInfoCurrentSlideLabel === "Intro Video") {
-                cp.show("SmartShape_114");
-                cp.show("Image_372");
-                cp.show("Image_371");
-                cp.show("Image_370");
-                cp.show(getElement("Play", "id"));
-                cp.hide(getElement("Pause", "id"));
-                cpCmndPause = true;
-            }
-
-
-            if (cpInfoCurrentSlideLabel === "Pre-Test") {
-                cp.hide(getElement("Play", "id"));
-                cp.hide(getElement("Pause", "id"));
-                disableMenu();              
-            }
-            
-
-            if (cpInfoCurrentSlideLabel === "Pre-Test Results") {
-                disableMenu();
-            }
-            
-            function disableMenu () {
-                var menuBtn = document.querySelectorAll('div[title="Menu"]');               
-
-                for (var i = 0; i < menuBtn.length; i++) {                    
-                    var menuItemCanvas = document.getElementById(menuBtn[i].id + "c");                    
-                    menuItemCanvas.style.opacity = ".5";
-                    menuBtn[i].style.cursor = "not-allowed";
-                } 
-            }
-
-        }
+ 
 
         // Custome settings for cousrse lessons
         function customSettings () {            
