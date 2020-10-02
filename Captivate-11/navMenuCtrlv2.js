@@ -1,5 +1,4 @@
-$(document)
-    .ready(function() {
+$(document).ready(function() {
         
         ///////////// Used to check for browser type ////////////////////////////////
         var isFirefox = typeof InstallTrigger !== 'undefined';
@@ -835,4 +834,4 @@ $(document)
 
             }
         }        
-    });
+});
