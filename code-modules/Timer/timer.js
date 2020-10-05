@@ -1,3 +1,10 @@
+function hideTimer () {
+    var slideLabel = cpInfoCurrentSlideLabel.slice(0, 14);
+
+    isTimer = (slideLabel !== 'Learning Check' || slideAudioName) ? true : false;
+
+}
+
 // Controls position of duration timer and color
 var durationTimePos = 'absolute';
 var durationTimeTop = '95%';

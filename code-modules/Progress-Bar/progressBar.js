@@ -1,3 +1,10 @@
+function hideProgress () {    
+    var slideLabel = cpInfoCurrentSlideLabel.slice(0, 14);
+
+    isProgress = (slideLabel !== 'Learning Check' || slideAudioName) ? true : false;
+
+}
+
 // Controls position of progress bar
 var proPos = 'absolute';
 var proTop = '87%';
