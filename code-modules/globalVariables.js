@@ -17,4 +17,4 @@ var lastFrame = currentSlide.to;
 var firstFrame = currentSlide.from;
 
 // Checks for audio on slide
-var slideAudio = currentSlide.audioName; 
+var slideAudioName = currentSlide.audioName; 

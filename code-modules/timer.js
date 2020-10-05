@@ -13,7 +13,7 @@ var currentTimeColor = 'white';
 
         /////////////////////// Timer //////////////////////////////////////////////
 
-        if (timer) {
+        if (isTimer) {
 
             ///////////// Duration Time ///////////////////
 

@@ -146,7 +146,7 @@ function progressStyle() {
 
         ///////////////////// Setup and controls progress bar /////////////////////////////////////////////////////
         
-        if (progress) {
+        if (isProgress) {
 
             // Creates Progress Bar
             var playBar = document.createElement('input');            

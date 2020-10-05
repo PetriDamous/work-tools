@@ -30,3 +30,17 @@ function disableMenu () {
         menuBtn[i].style.cursor = "not-allowed";
     } 
 }
+
+function hideProgress () {    
+    var slideLabel = cpInfoCurrentSlideLabel.slice(0, 14);
+
+    isProgress = (slideLabel !== 'Learning Check' || slideAudioName) ? true : false;
+
+}
+
+function hideTimer () {
+    var slideLabel = cpInfoCurrentSlideLabel.slice(0, 14);
+
+    isTimer = (slideLabel !== 'Learning Check' || slideAudioName) ? true : false;
+
+}

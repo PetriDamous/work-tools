@@ -159,4 +159,3 @@ $(getElement("Menu", "obj")).click(function(){
 function getElement (attribute, property) {
     return property === "obj" ?  $('div[data-button="' + attribute + '"]') : $('div[data-button="' + attribute + '"]').attr("id");            
 }
-

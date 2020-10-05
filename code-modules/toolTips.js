@@ -17,6 +17,7 @@ var toolTipArray = [
 
 toolTipArray.forEach(function(elm, idx) {
     var setDataAttr;
+    
     if (isIE) {                
         setDataAttr = $("p:contains(" + toolTipArray[idx] + ")" ).parent().parent();
         
