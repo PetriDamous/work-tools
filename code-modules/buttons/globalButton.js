@@ -43,13 +43,22 @@ function slideRest() {
     stayMute();
 }
 
+// Custom play function for WQP
+// Place inside of play button
 function videoPlay () {
-    // Custom play function for WQP
-    // Place inside of play button
     if(cpInfoCurrentSlideLabel.indexOf("Intro Video") !== -1) {
         cp.hide("SmartShape_114");
         cp.hide("Image_372");
         cp.hide("Image_371");
         cp.hide("Image_370");
     }
+}
+
+function disableMenuStyle () {
+    var menuBtn = document.querySelectorAll('div[title="Menu"]');               
+    for (var i = 0; i < menuBtn.length; i++) {                    
+        var menuItemCanvas = document.getElementById(menuBtn[i].id + "c");                    
+        menuItemCanvas.style.opacity = ".5";
+        menuBtn[i].style.cursor = "not-allowed";
+    } 
 }
