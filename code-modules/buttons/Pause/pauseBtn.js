@@ -1,10 +1,10 @@
 // Pause        
 $(getElement("Pause", "obj")).click(function () {
     if (cpInfoCurrentFrame < (lastFrame - 1)) {
-        cpCmndPause = true;                
+        cpCmndPause = 1;                
         hidePause();
     } else {
-        cpCmndPause = true;
+        cpCmndPause = 1;
         hidePlay();                
     }
 });

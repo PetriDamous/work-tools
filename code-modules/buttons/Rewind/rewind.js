@@ -6,13 +6,13 @@ $(getElement("Rewind", "obj")).click(function () {
         cpCmndGotoFrameAndResume = cpInfoCurrentFrame - rewindTime;
         hidePlay();
         stayMute();
-        cpCmndTOCVisible = false;       
+        cpCmndTOCVisible = 0;       
     }
     
     else{
         cpCmndGotoFrameAndResume = firstFrame;
         hidePlay();
         stayMute();
-        cpCmndTOCVisible = false;        			
+        cpCmndTOCVisible = 0;        			
     }
 });

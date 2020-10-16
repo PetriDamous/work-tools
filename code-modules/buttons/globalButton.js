@@ -38,7 +38,7 @@ function hideUnmute () {
 
 // Rests UI controls when entering new slide
 function slideRest() {
-    cpCmndTOCVisible = false;
+    cpCmndTOCVisible = 0;
     hidePlay();
     stayMute();
 }

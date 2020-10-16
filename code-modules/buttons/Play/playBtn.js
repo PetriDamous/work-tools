@@ -2,11 +2,11 @@
 $(getElement("Play", "obj")).click(function () {
  
     if (cpInfoCurrentFrame < (lastFrame - 1)) {              
-        cpCmndResume = true;
+        cpCmndResume = 1;
         hidePlay();
         stayMute();                
     } else {
-        cpCmndPause = true;
+        cpCmndPause = 1;
         hidePlay();                 
     }   
 });

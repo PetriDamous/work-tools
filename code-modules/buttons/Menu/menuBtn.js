@@ -4,10 +4,10 @@ $(getElement("Menu", "obj")).click(function () {
     
     if (disableMenuAction()) return;
  
-    if (cpCmndTOCVisible == false) {
-        cpCmndTOCVisible = true;
+    if (cpCmndTOCVisible === 0) {
+        cpCmndTOCVisible = 1;
     } else {
-        cpCmndTOCVisible = false;
+        cpCmndTOCVisible = 0;
     }
            
 });

@@ -4,13 +4,13 @@ $(getElement("Replay", "obj")).click(function () {
     
     if (cpCmndPause) {
         setTimeout(function () {
-            cpCmndResume = true;
+            cpCmndResume = 1;
         }, 300);
     }            
     
     
-    if(cpCmndTOCVisible == true) {
-        cpCmndTOCVisible = false;
+    if(cpCmndTOCVisible === 1) {
+        cpCmndTOCVisible = 0;
         hidePlay();
         stayMute();
     } else { 

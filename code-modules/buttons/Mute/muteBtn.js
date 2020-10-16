@@ -1,5 +1,5 @@
 // Mute              
 $(getElement("Mute", "obj")).click(function () {
-    cpCmndMute = true; 
+    cpCmndMute = 1; 
     hideMute();      
 });
