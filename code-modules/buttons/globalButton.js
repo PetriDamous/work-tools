@@ -42,3 +42,14 @@ function slideRest() {
     hidePlay();
     stayMute();
 }
+
+function videoPlay () {
+    // Custom play function for WQP
+    // Place inside of play button
+    if(cpInfoCurrentSlideLabel.indexOf("Intro Video") !== -1) {
+        cp.hide("SmartShape_114");
+        cp.hide("Image_372");
+        cp.hide("Image_371");
+        cp.hide("Image_370");
+    }
+}

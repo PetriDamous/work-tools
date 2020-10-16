@@ -22,11 +22,9 @@ $(getElement("Menu", "obj")).click(function () {
 });
 
 function disableMenuAction () {
-    if(cpInfoCurrentSlideLabel === "Pre-Test" || cpInfoCurrentSlideLabel === "Pre-Test Results") {
-        return true;
-    } else {
-        return false;
-    }
+
+    return cpInfoCurrentSlideLabel.indexOf("Pre-Test") !== -1 ? true : false;
+
 }
 
 function disableMenuStyle () {

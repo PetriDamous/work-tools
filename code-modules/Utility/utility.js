@@ -1,24 +1,22 @@
 // Custome settings for cousrse lessons
 function customSettings () {
-
-    if(cpInfoCurrentSlideLabel === "Intro Video") {
+    
+    if(cpInfoCurrentSlideLabel.indexOf("Intro Video") !== -1) {
         cp.show("SmartShape_114");
         cp.show("Image_372");
         cp.show("Image_371");
         cp.show("Image_370");
-        cp.show(getElement("Play", "id"));
-        cp.hide(getElement("Pause", "id"));
         cpCmndPause = true;
+        hidePause();
     }
 
-    if (cpInfoCurrentSlideLabel === "Pre-Test") {
+    if (cpInfoCurrentSlideLabel.indexOf("Pre-Test") !== -1) {
         cp.hide(getElement("Play", "id"));
         cp.hide(getElement("Pause", "id"));
-        disableMenu();              
+        disableMenuStyle();              
     }
-    
-    if (cpInfoCurrentSlideLabel === "Pre-Test Results") {
-        disableMenu();
-    }   
 
+    if (cpInfoCurrentSlideLabel.indexOf("Pre-Test") !== -1) {
+        disableMenuStyle();
+    }
 }

@@ -13,6 +13,11 @@ $(getElement("Closed Caption", "obj")).click(function () {
 
 });
 
+
+$(getElement("Closed Caption", "obj")).click(function () {
+    ccToolTip();
+});
+
 ccToolTip(); 
 
 function ccToolTip () {
