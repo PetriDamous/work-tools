@@ -1,29 +1,32 @@
-$(document).ready(function() {
+$(document)
+    .ready(function() {
         ///////////// Used to check for browser type ////////////////////////////////
         var isFirefox = typeof InstallTrigger !== 'undefined';
         var isIE = /*@cc_on!@*/false || !!document.documentMode;
         var isEdge = !isIE && !!window.StyleMedia;
         var isChrome = navigator.webkitGetUserMedia; 
-        
-        cpCmndShowPlaybar = false;
-        
+
         /////////////// Component Properties ///////////////////////////
         
         // Turns Progress bar on and off
-        var progress = true;
+        var isProgress = true;
 
         // Controls position of CC text box
         var ccLeft = '0px';
         var ccHeight = '75px';
-        var ccBottom = '40px';
+        var ccTop = null;        
+        var ccRight = null;        
+        var ccBottom = '40px';        
+        var ccLeft = null;
         var ccWidth = '960px';
         var ccTextColor = 'grey';
-        var ccBackgroundColor = 'white';
-        
+        var ccBackgroundColor = 'white';        
 
         // Controls position of progress bar
         var proPos = 'fixed';        
-        var proTop = '87.4%';
+        var proTop = null;
+        var proRight = null;
+        var proBottom = "62px";
         var proLeft = '0px';        
         var proWidth = '955px';
         var proHeight = '5px';
@@ -34,7 +37,7 @@ $(document).ready(function() {
         // slide property corresponds to number of the slide
         // text property corresponds to cc text to display on screen
         // If slide does not have CC text do not include slide in array.
-        ccTextArray = [
+        var ccTextArray = [
             {
                 slide: "Disaster on the Horizon",
                 text: "The date is in the not too distant future and you are stationed at a major U.S. Army medical command activity. The world situation has remained tenuous, and recently a significant breach of security has resulted in a series of tragedies for the nation and the Army.",
@@ -212,12 +215,12 @@ $(document).ready(function() {
             },
 
             {
-                slide: "Removable Media Transfer and Storage",
+                slide: "Removable Media Transfer and Storage 1",
                 text: "One area of ALL government automation security that has received increased attention and emphasis is the prohibition on the use of removable media and temporary media storage devices. Because of the ability of these relatively modern and increasingly compact devices to store huge amounts of classified information, and the difficulty of detecting their surreptitious use, Department of Defense and Army policy has increasingly become more restrictive on their use, and even presence, within areas where classified information is discussed or widely used. For the purpose of MEDCOM policy and SIPRNET annual refresher training, the use of thumb drives, flash drives, memory cards, memory sticks, floppy disks, or similar portable or removable storage devices is expressly prohibited.",
             },
 
             {
-                slide: "Removable Media Transfer and Storage",
+                slide: "Removable Media Transfer and Storage 2",
                 text: "Two additional security concerns related to modern communications and information systems are the issues of Spillage and Spyware. The major security concern that requires emphasis is the issue of data transfer across security domains. This is known as “spillage,” and is defined as a security incident that results in the transfer of classified information onto an information system that is not accredited (meaning authorized) for that level of classified data or information. Within MEDCOM, transferring any data from a SIPRNET computer to an unclassified system is prohibited. Another security concern is spyware, software that is secretly or surreptitiously installed into an information system to gather information on individuals or organizations without their knowledge; it is a type of malicious code. The three most common means of entering this code on a communications or information system are by the use of an unauthorized removable media storage device, entering a prohibited website, or through opening a contaminated attachment. This is an additional reason that removable modern media storage devices are prohibited on MEDCOM SIPRNET computers.",
             },
 
@@ -227,7 +230,7 @@ $(document).ready(function() {
             },
 
             {
-                slide: "Marking Classified Documents",
+                slide: "Marking Classified Documents 1",
                 text: "Although historically not a major area of security compromise or violation, it is prudent to remind MEDCOM SIPRNET users that classified documents with which they work or create must be both marked correctly and properly destroyed. All documents to include PowerPoint slides, presentations, and email messages must be marked to reflect the highest classification of those products, to include products which are entirely unclassified. The products or documents will include the following markings: The overall highest classification, individual paragraph classification marking, page or individual view-graph marking, the classification authority, and declassification instructions. Select the right arrow for an example of correctly marking a classified document. If you have additional questions, your organization security manager or S2 will be pleased to provide detailed guidance.",
             },
 
@@ -237,7 +240,7 @@ $(document).ready(function() {
             },
 
             {
-                slide: "Marking Classified Documents",
+                slide: "Marking Classified Documents 2",
                 text: "MEDCOM SIPRNET users often create PowerPoint presentations on their SIPRNET computer, and it is important to remember that these presentations, if they contain classified information, must also be marked to accurately and correctly reflect the classification of the presentation. The classification marking must include the portions that are both classified and unclassified. As an example: for this classified presentation, note the title page has the highest classification of the presentation, the classification authority, and declassification instructions. For each page within the presentation, it is marked with the information addressed in that frame. Remember that each bullet must also be marked with the specific security classification that applies, especially if there are different security classifications for each point on that page.",
             },
 
@@ -503,7 +506,10 @@ $(document).ready(function() {
         var firstFrame = currentSlide.from;
         
         // Checks for audio on slide
-        var slideAudio = currentSlide.audioName;        
+        var slideAudio = currentSlide.audioName; 
+        
+        // Grabs slide label
+        var slideLabel = cpInfoCurrentSlideLabel.trim().toLowerCase();
         
         /////////////////////// Tool tips, Elements, ID ///////////////////////////////////////
 
@@ -628,6 +634,9 @@ $(document).ready(function() {
 
         $('#ccTextBox').css({
             'position' : 'absolute',
+            'top' : ccTop,
+            'right' : ccRight,
+            'bottom' : ccBottom,
             'left' : ccLeft,            
             'width' : ccWidth,
             'height' : ccHeight,
@@ -645,7 +654,8 @@ $(document).ready(function() {
         ccTextBox.style.visibility = 'hidden';
 
         for (var i = 0; i < ccTextArray.length; i++) {
-            if (ccTextArray[i].slide === slideNum) {
+
+            if (ccTextArray[i].slide.trim().toLowerCase() === slideLabel) {
                 $('#ccParagraph').text(ccTextArray[i].text);
                 break;
             } else {
@@ -665,17 +675,13 @@ $(document).ready(function() {
 
         // Removes progress bar and timer from Learning Check slides and slides with no audio
 
-        var slideLabel = cpInfoCurrentSlideLabel.slice(0, 17).trim();       
-
-        // if (slideLabel.slice(0, 17) === "Check_On_Learning" || !slideAudio) progress = false;
-
-        progress = slideLabel !== "Check_On_Learning" || slideAudio;
+        isProgress = slideAudio;
 
         ///////////// Progress bar ////////////////////////////
 
         ///////////////////// Setup and controls progress bar /////////////////////////////////////////////////////
         
-        if (progress) {
+        if (isProgress) {
 
             // Creates Progress Bar
             var playBar = document.createElement('input');            
@@ -688,15 +694,16 @@ $(document).ready(function() {
             playBar.max = lastFrame;            
             
             
-            // Places Progress Bar on slide
-            // $("#div_Slide").append(playBar);            
+            // Places Progress Bar on slide           
             
             $("#div_Slide").append(playBar);
 
             // Positions Progress Bar            
             $('#seekerBar').css({
                 'position': proPos, 
-                'top': proTop, 
+                'top': proTop,
+                'right': proRight,
+                'bottom': proBottom, 
                 'left': proLeft,
                 'width': proWidth,                
                 'z-index': proZindex,

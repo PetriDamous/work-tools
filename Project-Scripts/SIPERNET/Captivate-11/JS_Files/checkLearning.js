@@ -1,10 +1,12 @@
 $(document).ready(function() {
 
-    var learningId = cpInfoCurrentSlideLabel.trim().slice(-4); 
-    
-    var questionType = learningId.trim().slice(0, 2); 
-    
+    var learningId = cpInfoCurrentSlideLabel.trim().slice(-4);    
+    var questionType = learningId.trim().slice(0, 2);     
     var parent = document.getElementById("div_Slide");
+
+    if (!window.completedQuestions) {
+        window.completedQuestions = [];
+    }    
     
     var questions = [
         {
@@ -13,7 +15,7 @@ $(document).ready(function() {
         },
         {
             id: "MC01",
-            answer: "a"
+            answer: "e"
         },
         {
             id: "MC02",
@@ -56,17 +58,22 @@ $(document).ready(function() {
             break;
         }
     }
+
+    function getAllChildren () {
+        return Array.prototype.slice.call(parent.children);
+    }
     
     function filterButtons (question) {
         var id = question.id;
-    
-        var children = parent.children;
-        var childrenArray = Array.prototype.slice.call(children);
+
+        var childrenArray = getAllChildren();
         
         var filteredButtons = childrenArray.filter(function(child) {  
             child.id = child.id.trim();            
             return child.id.slice(-4) === id && child.id.slice(0, 4) === "btn_";
         }); 
+
+        
         
         buttonActions(question, filteredButtons);
     }
@@ -77,8 +84,8 @@ $(document).ready(function() {
         var correctCounter = 0;
     
         parent.addEventListener("click", function(e) {       
-            if (!isActive) return;
-    
+            if (!isActive || window.completedQuestions.some(checkCompleted)) return;
+            
             var btn = filteredButtons.filter(function(elm) {
                 return elm.id === e.target.id;
             });
@@ -90,38 +97,40 @@ $(document).ready(function() {
             var btnLabel = btnValues.btnLabel;
             var answerLabel = btnValues.answerLabel;
     
-            cp.hide("#unlock_" + btnLabel);
+            cp.hide("unlock_" + btnLabel);
     
             if (questionType === "TF" || questionType === "MC") {
                 if (answer === answerLabel) {
-                    cp.show("#greenLock_" + btnLabel);
+                    cp.show("greenLock_" + btnLabel);
                     isActive = false;
-                    showFeedBack(true); 
+                    showFeedBack(true);
+                    trackCompleted(learningId); 
                 } else {
-                    cp.show("#redLock_" + btnLabel);
+                    cp.show("redLock_" + btnLabel);
                     isActive = false;
-                    showFeedBack(false); 
+                    showFeedBack(false);
+                    trackCompleted(learningId);  
                 }
             }
             
             if (questionType === "MS") {
                 var isCorrect = answer.some(function(answer) {
                     return answer === answerLabel;
-                });
+                });                
         
                 if (isCorrect) {
-                    cp.show("#greenLock_" + btnLabel);
+                    cp.show("greenLock_" + btnLabel);
                     correctCounter++;
                     if (correctCounter === answer.length) {
-                        console.log("Finished")
                         isActive = false;
-                        showFeedBack(true);                
+                        showFeedBack(true); 
+                        trackCompleted(learningId);                
                     }
                 } else {
-                    cp.show("#redLock_" + btnLabel);
-                    console.log("Failed")
+                    cp.show("redLock_" + btnLabel);
                     isActive = false;
                     showFeedBack(false);
+                    trackCompleted(learningId); 
                 }
             }
         });
@@ -148,6 +157,14 @@ $(document).ready(function() {
             cp.show("incorrectLock_" + learningId);
             cp.show("failureComment_" + learningId);
         }
+    }
+
+    function trackCompleted (questionId) {
+        window.completedQuestions.push(questionId);
+    }
+
+    function checkCompleted (questionId) {
+        return questionId === learningId;
     }
 
 });
