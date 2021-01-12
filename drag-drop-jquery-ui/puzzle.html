@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #E5F4DE;
+            width: 795px;
+            height: 525px;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #396337;
+            font-weight: bold; 
+            overflow: hidden;           
+        }   
+
+        h1 {
+            font-size: 24px;
+            letter-spacing: 1px;
+            color: #396337;
+            margin-bottom: 5px;            
+        }
+
+        h2 {
+            font-size: 18px;
+            margin: 0;
+            color: #8D9245;
+        }
+
+        .instruction-text {
+            font-size: 14px;
+            margin-right: 25px;
+        }
+
+        header {
+            margin-left: 25px;
+        }
+
+        .d-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        #container {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 15px;
+        }
+
+        .right-container {
+            display: flex;
+        }
+
+        .droppable-container {
+            width: 192px;
+        }
+
+        .draggable, 
+        .drop-answ,
+        .droppable {
+            width: 14em;
+            height: 58px;
+            margin: 6px;
+            position: relative;
+            -webkit-border-radius: .5em;
+            -moz-border-radius: .5em;
+            border-radius: .5em;
+        }
+
+        .draggable {
+            cursor: pointer;
+        }
+
+        .droppable {
+            visibility: hidden;
+        }
+
+        .drop-answ {
+            width: 27em;
+        }
+
+        .droppable,
+        .draggable {
+            width: 16em;
+        }
+
+        .draggable,
+        .draggable span,
+        .droppable,
+        .droppable span {
+            background-color: #0284cf; 
+        }
+        
+        .drop-answ,
+        .drop-answ span {
+         background-color: #00008B; 
+        }
+        
+        .text {
+          display: block;
+          color: #fff;
+          font-size: 1em;
+          text-align: center;
+          padding: 20px;
+          position: relative;
+          background: transparent !important;
+        }
+
+        .drag-text,
+        .drop-text {
+            padding: 20px 0 0;
+        }
+        
+        .draggable .r,
+        .droppable .r {
+            width: 10em;
+            height: 2em;
+            position: absolute;
+            top: 18px;
+            left: 7.5em;
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+        }
+        
+        .drop-answ .l { 
+            width: 1.8em;
+            height: 1.8em;
+            position: absolute;
+            top: 20px;
+            left: -.4em;
+            -webkit-border-radius: 4em;
+            -moz-border-radius: 4em;
+            border-radius: 4em;
+            background-color: #E5F4DE;
+        }
+
+        .dragging {
+            text-shadow: 1px 1px 2px #333;
+            z-index: 3000;
+        } 
+
+        .dropped {
+            cursor: none;
+        }
+
+    </style>
+    <script src="dist/js/jquery-1.12.4.js"></script>
+    <script src="dist/js/jquery-ui.js"></script> 
+</head>
+<body>
+
+    <header>
+        <h1>POP QUESTION</h1>
+        <div class="d-flex">
+            <h2 id="sub-heading"></h2>
+            <div id="instruction-text" class="instruction-text"></div> 
+        </div>        
+    </header>
+
+    <div id="container">
+        <div class="left-container">
+            <div class="draggable">
+                <span class="r"></span>        
+                <span class="drag-text text"></span>
+            </div>
+        
+            <div class="draggable">
+                <span class="r"></span>        
+                <span class="drag-text text"></span>
+            </div>
+        
+            <div class="draggable">
+                <span class="r"></span>        
+                <span class="drag-text text"></span>
+            </div>
+        
+            <div class="draggable">
+                <span class="r"></span>        
+                <span class="drag-text text"></span>
+            </div>
+        
+            <div class="draggable">
+                <span class="r"></span>        
+                <span class="drag-text text"></span>
+            </div>
+        
+            <div class="draggable">
+                <span class="r"></span>        
+                <span class="drag-text text"></span>
+            </div>
+        
+            <div class="draggable">
+                <span class="r"></span>        
+                <span class="drag-text text"></span>
+            </div>
+        </div>
+        
+        <div class="right-container">
+
+            <div class="droppable-container">
+                <div class="droppable">
+                    <span class="r"></span>        
+                    <span class="drop-text text"></span>
+                </div>
+
+                <div class="droppable">
+                    <span class="r"></span>        
+                    <span class="drop-text text"></span>
+                </div>
+
+                <div class="droppable">
+                    <span class="r"></span>        
+                    <span class="drop-text text"></span>
+                </div>
+
+                <div class="droppable">
+                    <span class="r"></span>        
+                    <span class="drop-text text"></span>
+                </div>
+
+                <div class="droppable">
+                    <span class="r"></span>        
+                    <span class="drop-text text"></span>
+                </div>
+
+                <div class="droppable">
+                    <span class="r"></span>        
+                    <span class="drop-text text"></span>
+                </div>
+
+                <div class="droppable">
+                    <span class="r"></span>        
+                    <span class="drop-text text"></span>
+                </div>
+            </div>
+
+            <div class="drop-anser-container">
+                <div class="drop-answ">        
+                    <span class="l"></span>
+                    <span class="drop-text-answ text"></span>
+                </div>
+        
+                <div class="drop-answ">        
+                    <span class="l"></span>
+                    <span class="drop-text-answ text"></span>
+                </div>
+        
+                <div class="drop-answ">        
+                    <span class="l"></span>
+                    <span class="drop-text-answ text"></span>
+                </div>
+        
+                <div class="drop-answ">        
+                    <span class="l"></span>
+                    <span class="drop-text-answ text"></span>
+                </div>
+        
+                <div class="drop-answ">        
+                    <span class="l"></span>
+                    <span class="drop-text-answ text"></span>
+                </div>
+        
+                <div class="drop-answ">        
+                    <span class="l"></span>
+                    <span class="drop-text-answ text"></span>
+                </div>
+        
+                <div class="drop-answ">        
+                    <span class="l"></span>
+                    <span class="drop-text-answ text"></span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script> 
+
+        var subText = "";
+        var instructions = "Match the correct choice on the right with the choice on left.";
+
+        var textDraggableArray = [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+        ];
+
+        var textDropAnswArray = [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""           
+        ];        
+
+        var correctCount = 7;        
+
+        var dropMatch_1 = ["draggable_1"];
+        var dropMatch_2 = ["draggable_2"];
+        var dropMatch_3 = ["draggable_3"];
+        var dropMatch_4 = ["draggable_4"];
+        var dropMatch_5 = ["draggable_5"];
+        var dropMatch_6 = ["draggable_6"];
+        var dropMatch_7 = ["draggable_7"];
+
+        // Change code above
+
+        var matchCount = 0;
+
+        var instructionText = document.getElementById("instruction-text");
+        var subHeading = document.getElementById("sub-heading");
+        var draggables = document.querySelectorAll(".draggable");
+        var droppables = document.querySelectorAll(".droppable");
+        var dragText = document.querySelectorAll(".drag-text");
+        var dropText = document.querySelectorAll(".drop-text");
+        var dropTextAnsw = document.querySelectorAll(".drop-text-answ");
+        var dropAnswLeft = document.querySelectorAll(".drop-answ .l");
+
+        var dragsArray = Array.prototype.slice.call(draggables);
+        var dropsArray = Array.prototype.slice.call(droppables);
+        var dragTextArray = Array.prototype.slice.call(dragText);
+        var dropTextArray = Array.prototype.slice.call(dropText);
+        var dropTextAnswArray = Array.prototype.slice.call(dropTextAnsw);
+        var dropAnswLeftArray = Array.prototype.slice.call(dropAnswLeft);
+
+        subHeading.textContent = subText;
+        instructionText.textContent = instructions;
+
+        dragTextArray.forEach(function (text, idx) {
+            text.textContent = textDraggableArray[idx];
+        });
+
+        dropTextArray.forEach(function (text, idx) {
+            text.textContent = textDraggableArray[idx];
+        });
+
+        dropTextAnswArray.forEach(function (text, idx) {
+            text.textContent = textDropAnswArray[idx];
+        });
+
+        var matchArray = [dropMatch_1, dropMatch_2, dropMatch_3, dropMatch_4, dropMatch_5, dropMatch_6, dropMatch_7];
+
+        dragsArray.forEach(function (draggable, idx) {
+            draggable.id = "draggable_" + (idx + 1);            
+
+            $("#" + draggable.id).draggable({
+                containment: "#container",
+                revert: true,
+                start: startDrag,
+                stop: stopDrag
+            });
+        });
+
+        dropsArray.forEach(function (droppable, idx) {
+            droppable.id = "droppable_" + (idx + 1);
+            
+            droppable.accept = matchArray[idx];
+            
+            $("#" + droppable.id).droppable({
+                drop: dropItem
+            });            
+        });
+
+        function startDrag (event, ui) {
+            $(this).addClass('dragging');  
+        }
+
+        function stopDrag (event, ui) {
+            $(this).removeClass('dragging');  
+        }
+
+        function dropItem (event, ui) {
+            var draggable = ui.draggable;
+            var draggableId = draggable[0].id;
+            var droppable = this;
+
+            if (checkMatch(droppable.accept, draggableId)) {
+                setDrop(draggable, droppable);
+            }
+
+            if (matchCount >= correctCount) {
+                complete(draggable, droppable);
+            } 
+            
+        }
+
+        function checkMatch (array, draggableId) {
+            var match = array.some(function (arrayVal) {
+                return arrayVal === draggableId;
+            });
+
+            if (match) {
+                matchCount++
+                return true;
+            }
+        }
+
+        function setDrop (draggable, droppable) {           
+            var draggableItem = draggable[0];
+            var arrayIdx = (Number(droppable.id.slice(10)) - 1);
+
+            draggableItem.style.visibility = "hidden";
+            draggableItem.classList.add("dropped");
+
+            dropAnswLeftArray[arrayIdx].style.backgroundColor = "#0284CF";
+            droppable.style.visibility = "visible";                     
+        }
+
+        function complete(draggable, droppable) {
+            dragsArray.forEach(function (drag) {
+                    $("#" + drag.id).draggable('disable');
+                    drag.style.cursor = "default";
+            });
+
+            instructionText.textContent = "Congratulations!!! Click next to continue";
+
+            parent.enableFF();
+
+        }
+
+    </script>
+
+</body>
+</html>

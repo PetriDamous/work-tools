@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Autocomplete - XML data parsed once</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  .ui-autocomplete-loading {
+    background: white url("images/ui-anim_basic_16x16.gif") right center no-repeat;
+  }
+  .ui-autocomplete {
+    max-height: 100px;
+    max-width: 300px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+  }
+  /* IE 6 doesn't support max-height
+   * we use height instead, but this forces the menu to always be this tall
+   */
+  * html .ui-autocomplete {
+    height: 100px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+var myXML;
+var termGiven = 'Absorb';
+
+
+  $( function() {
+    function log( message ) {
+      $( "<div/>" ).text( message ).prependTo( "#log" );
+      $( "#log" ).attr( "scrollTop", 0 );
+    }
+    $.ajax({
+      url: "glossary.xml",
+      dataType: "xml",
+      success: function( xmlResponse ) {
+        var data = $( "term", xmlResponse ).map(function() {
+          return {
+            value: $( "name", this ).text(),
+            id: $( "definition", this).text()
+          };
+        }).get();
+        $( "#terms" ).autocomplete({
+          source: data,
+          minLength: 0,
+          select: function( event, ui ) {
+            log(  ui.item.value + " : " + ui.item.id );
+          }
+        });
+        
+      }
+     
+    });
+  } );
+  </script>
+</head>
+<body>
+  <div align="center">
+<div class="ui-widget">
+  <label for="terms">Search for: </label>
+  <input id="terms">
+</div>
+
+<div class="ui-widget" style="margin-top:2em; font-family:Arial">
+  Definition:
+  <div id="log" style="height: 200px; width:300px; overflow: auto;" class="ui-widget-content"></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #E5F4DE;
+            width: 795px;
+            height: 525px;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: #396337;
+            font-weight: bold; 
+            overflow: hidden;           
+        }   
+
+        h1 {
+            font-size: 24px;
+            letter-spacing: 1px;
+            color: #396337;
+            margin-bottom: 5px;            
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-top: 0;
+            color: #8D9245;
+        }
+
+        .instruction-text {
+            margin-right: 25px;
+        }
+
+        header { margin-left: 25px; }
+
+        #container,
+        .flex-container,
+        .left-container,
+        .right-container {
+            height: 100%;
+        }
+
+        #container {
+            overflow: hidden;
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+ 
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .left-container { width: 530px; }
+
+        .right-container { width: 200px; }
+
+        .drag-container,
+        .correct-container {
+            border: 5px solid black;            
+            border-radius: 10px;
+            width: 515px;
+            margin-top: 7%;
+            margin-left: 18px;
+            padding: 5px;
+            
+            background: #e2e2e2; 
+            background: -moz-linear-gradient(top,  #e2e2e2 0%, #dbdbdb 20%, #d1d1d1 100%, #fefefe 100%, #d1d1d1 100%); 
+            background: -webkit-linear-gradient(top,  #e2e2e2 0%,#dbdbdb 20%,#d1d1d1 100%,#fefefe 100%,#d1d1d1 100%); 
+            background: linear-gradient(to bottom,  #e2e2e2 0%,#dbdbdb 20%,#d1d1d1 100%,#fefefe 100%,#d1d1d1 100%); 
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#d1d1d1',GradientType=0 ); 
+        }
+
+        .drag-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .correct-container-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .correct-item {
+            width: 50%;
+        }
+
+        .correct-item:first-child {
+            margin-left: 5px;
+        }
+
+        .correct-item p {
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .dragging {
+            box-shadow: 5px 5px 2px #333;
+            margin: 0;
+        }
+
+        .dropped { cursor: none; }
+
+        .draggable-item-1 {
+            background: url("./images/page21/bed-sheet.jpg");
+        }
+
+        .draggable-item-2 {
+            background: url("./images/page21/uniform.png");
+        }
+
+        .draggable-item-3 {
+            background: url("./images/page21/boots.jpg");
+        }
+
+        .draggable-item-4 {
+            background: url("./images/page21/shirt.png");
+        }
+
+        .draggable-item-5 {
+            background: url("./images/page21/deet.png");
+        }
+
+        .draggable-item-6 {
+            background: url("./images/page21/uniform.png");
+        }
+
+        .draggable-item-7 {
+            background: url("./images/page21/cologne.jpg");
+        }
+
+        .draggable-item-8 {
+            background: url("./images/page21/bed-net.jpg");
+        } 
+
+        .draggable-item {
+            border: 3px solid black;
+            width: 120px;
+            height: 120px;
+            margin: 15px 0 15px;            
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            cursor: pointer;
+        }
+
+        .draggable-item img { width: 100%; }
+
+        .drop-container-1,
+        .drop-container-2 {
+            border: 1px solid black;
+            width: 200px;
+            
+            background: #eeeeee; 
+            background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 45%, #cccccc 45%); 
+            background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 45%,#cccccc 45%); 
+            background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 45%,#cccccc 45%); 
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); 
+
+        }
+
+        .drop-container-1 { margin-top: 18px; }
+
+        .drop-container-1 img { width: 100%; }
+
+        .drop-container-2 { margin-top: 18px; }
+
+        .drop-container-2 img { width: 100%; }
+
+        .u-margin-bottom { margin-bottom: 5px; }
+
+    </style>
+    <script src="dist/js/jquery-1.12.4.js"></script>
+    <script src="dist/js/jquery-ui.js"></script>    
+</head>
+<body>
+
+    <div id="container">
+        <div class="flex-container">
+            <div class="left-container">
+                <header>
+                    <h1>POP QUESTION</h1>
+                    <h2 id="sub-heading"></h2>
+                    <div id="instruction-text" class="instruction-text"></div>        
+                </header>
+            
+                <div id="drag-container" class="drag-container">
+                    <div class="draggable-item draggable-item-1" title="Permethrin-treated sheets & pillowcases"></div>
+                    <div class="draggable-item draggable-item-2" title="long-sleeved uniform (not treated)"></div>
+                    <div class="draggable-item draggable-item-3" title="Permethrin-treated pants (tucked in)"></div>
+                    <div class="draggable-item draggable-item-4" title="short-sleeved shirts"></div>
+                    <div class="draggable-item draggable-item-5" title="Deet Skin Repellent"></div>
+                    <div class="draggable-item draggable-item-6" title="long-sleeved uniform (treated)"></div>
+                    <div class="draggable-item draggable-item-7" title="Aftershave cologne"></div>
+                    <div class="draggable-item draggable-item-8" title="Permethrin-treated bed net"></div>
+                </div>
+                
+                <div class="correct-container" id="correct-container">
+                    <h1>Congratulations! You matched them all!</h1>
+                    <div class="correct-container-row">
+                        <div class="correct-item">
+                            <div class="draggable-item draggable-item-5 u-margin-bottom" title="Deet Skin Repellent"></div>
+                            <p>Deet Skin Repellent</p>
+                        </div>
+                        <div class="correct-item">
+                            <div class="draggable-item draggable-item-6 u-margin-bottom" title="long-sleeved uniform (treated)"></div>
+                            <p>long-sleeved uniform (treated)</p>
+                        </div>
+                        <div class="correct-item">
+                            <div class="draggable-item draggable-item-3 u-margin-bottom" title="Permethrin-treated pants (tucked in)"></div>
+                            <p>Permethrin-treated pants (tucked in)</p>
+                        </div>
+                        <div class="correct-item">
+                            <div class="draggable-item draggable-item-8 u-margin-bottom" title="Permethrin-treated bed net"></div>
+                            <p>Permethrin-treated bed net</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-container">
+                <div class="drop-container drop-container-1">
+                    <img src="images/page21/soldier.png" alt="">
+                </div>
+    
+                <div class="drop-container drop-container-2">
+                    <img src="images/page21/bed.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <script> 
+
+        var subText = "DOD-Repellent System";
+        var instructions = "Drag and drop the items that  will protect a soldier from mosquito-borne diseases (the DOD-repellent system). You can also drag to the bed.";        
+
+        var correctCount = 4; 
+
+        var dropMatch_1 = ["draggable_6", "draggable_5", "draggable_3"];
+        var dropMatch_2 = ["draggable_8"];      
+
+        // Change code above
+
+        var matchCount = 0;
+
+        var instructionText = document.getElementById("instruction-text");
+        var subHeading = document.getElementById("sub-heading");
+        var draggables = document.querySelectorAll(".draggable-item");
+        var droppables = document.querySelectorAll(".drop-container");
+        var dragContainer = document.getElementById("drag-container");
+        var correctContainer = document.getElementById("correct-container");
+
+        correctContainer.style.display = "none";
+
+        var dragsArray = Array.prototype.slice.call(draggables);
+        var dropsArray = Array.prototype.slice.call(droppables);
+
+        subHeading.textContent = subText;
+        instructionText.textContent = instructions;
+
+        var matchArray = [dropMatch_1, dropMatch_2];
+
+        dragsArray.forEach(function (draggable, idx) {
+            draggable.id = "draggable_" + (idx + 1);            
+
+            $("#" + draggable.id).draggable({
+                containment: "#container",
+                revert: true,
+                start: startDrag,
+                stop: stopDrag
+            });
+        });
+
+        dropsArray.forEach(function (droppable, idx) {
+            droppable.id = "droppable_" + (idx + 1);  
+            
+            droppable.accept = matchArray[idx];
+            
+            $("#" + droppable.id).droppable({
+                drop: dropItem
+            });            
+        });
+
+        function startDrag (event, ui) {
+            $(this).addClass('dragging');  
+        }
+
+        function stopDrag (event, ui) {
+            $(this).removeClass('dragging');  
+        }
+
+        function dropItem (event, ui) {
+            var draggable = ui.draggable;
+            var draggableId = draggable[0].id;
+            var droppable = this;
+
+            if (checkMatch(droppable.accept, draggableId)) {
+                setDrop(draggable, droppable);
+            } else {
+                incorrectMatch();
+            }
+
+            if (matchCount >= correctCount) {
+                complete(draggable, droppable);
+            } 
+            
+        }
+
+        function checkMatch (array, draggableId) {
+            var match = array.some(function (arrayVal) {
+                return arrayVal === draggableId;
+            });
+
+            if (match) {
+                matchCount++
+                return true;
+            }
+        }
+
+        function incorrectMatch () {
+            $("#droppable_1 img").attr("src", "images/page21/soldier-wrong.png");
+            
+            $("#droppable_1 img").effect( "shake", {times:4, distance: 5}, 1000, function() {
+                $("#droppable_1 img").attr("src", "images/page21/soldier.png");
+            });
+        }
+
+        function setDrop (draggable, droppable) {            
+            var draggableItem = draggable[0];
+            draggableItem.style.visibility = "hidden";
+            draggableItem.classList.add("dropped");           
+        }
+
+        function complete(draggable, droppable) {
+            dragsArray.forEach(function (drag) {
+                    $("#" + drag.id).draggable('disable');
+                    drag.style.cursor = "default";
+            });
+
+            dragContainer.style.display = "none";
+            correctContainer.style.display = "block";
+
+            instructionText.textContent = "Congratulations!!! Click next to continue";
+
+            parent.enableFF();
+
+        }
+
+    </script>
+    
+</body>
+</html>

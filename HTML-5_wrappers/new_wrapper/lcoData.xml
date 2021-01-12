@@ -1,0 +1,1211 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<lcoData>
+  <properties>
+    <property name="system.qaMode" type="boolean"><![CDATA[false]]></property>
+    <property name="system.developmentMode" type="boolean"><![CDATA[false]]></property>
+    <property name="system.externalReview" type="boolean"><![CDATA[false]]></property>
+    <property name="data.dataInterface" type="string"><![CDATA[SCORM2004]]></property>
+    <property name="data.showDataInterfaceFailureNotice" type="boolean"><![CDATA[false]]></property>
+    <property name="ui.createWindow" type="boolean"><![CDATA[false]]></property>
+    <property name="data.autoComplete" type="boolean"><![CDATA[false]]></property>
+  </properties>
+  <lco id="l001_pest-labl-i" audioSync="-0.1">
+    <title><![CDATA[Pesticide Labeling I]]></title>
+    <page id="0010" images="1" file="l1_1.swf">
+      <heading><![CDATA[Lesson At A Glance]]></heading>
+      <subHeading><![CDATA[Lesson Topics]]></subHeading>
+      <items></items>
+      <caption><![CDATA[]]></caption>
+    </page>
+    <page id="0020" images="1" file="l1_2.swf">
+      <heading><![CDATA[Introduction]]></heading>
+      <subHeading><![CDATA[Have You Ever...]]></subHeading>
+      <items>
+        <item id="1" time="0.784">
+          <text><![CDATA[Wiped out your lawn along with the weeds?<br>]]></text>
+        </item>
+        <item id="2" time="8.255">
+          <text><![CDATA[Made a second trip to the store?<br>]]></text>
+        </item>
+        <item id="3" time="14.811">
+          <text><![CDATA[Made a dash for fresh air after mixing two cleaning products?<br>]]></text>
+        </item>
+        <item id="4" time="22.465">
+          <text><![CDATA[Sprayed your tomatoes for bugs and killed your plants instead?]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[Have you ever...Wiped out your lawn along with the weeds? (You figured that if some lawn treatment was good, more should be better.) Made a second trip to the store? (The product you bought the first time turned out to be wrong for the job.) Made a dash for fresh air after mixing two cleaning products? (You figured if one was good, two would be even better.) Sprayed your tomatoes for bugs and killed your plants instead? (The spray you used wasn't supposed to be used on vegetables.)]]></caption>
+    </page>
+    <page id="0030" images="1" file="l1_3.swf">
+      <heading><![CDATA[Introduction]]></heading>
+      <subHeading><![CDATA[Read a Good Label Lately?]]></subHeading>
+      <items>
+        <item id="1" time="2.22">
+          <text><![CDATA[The task of reading a pesticide label is the foundation of good pest management.<br>]]></text>
+        </item>
+        <item id="2" time="7.654">
+          <text><![CDATA[You can avoid mishaps if you...]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[Incredible as it may seem, the humble task of reading a pesticide label is really the foundation of good pest management.  You can avoid mishaps like the ones just described by taking the time to...Read the label.]]></caption>
+    </page>
+    <page id="0040" images="1" file="l1_4.swf">
+      <heading><![CDATA[Introduction]]></heading>
+      <subHeading><![CDATA[User Friendly?]]></subHeading>
+      <items>
+        <item id="1" time="5">
+          <text><![CDATA[<i>(Click the Vikane label to see examples<BR>of just how confusing labels can be.)<i/>]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[A pesticide label may not always be the most user-friendly, at-a-glance reading material. Click on the <i>Vikane</i> label, to see examples of just how confusing labels can be.]]></caption>
+    </page>
+    <page id="0050" images="1" file="l1_5.swf">
+      <heading><![CDATA[Introduction]]></heading>
+      <subHeading><![CDATA[Easy Light Reading?]]></subHeading>
+      <items>
+        <item id="1" time="0.3">
+          <text><![CDATA[Not the first thing that comes to mind for a pleasant, <br>enjoyable read<br>]]></text>
+        </item>
+        <item id="2" time="4.127">
+          <text><![CDATA[Not the kind of reading material you would want to <br>curl up with on the couch]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[Certainly not anyone's idea of pleasant, light reading.  Or the kind of reading material you would want to curl up with on the couch.]]></caption>
+    </page>
+    <page id="0060" images="1" file="l1_6.swf">
+      <heading><![CDATA[About Labels]]></heading>
+      <subHeading><![CDATA[Give Labels a Chance]]></subHeading>
+      <items>
+        <item id="1" time="5.982">
+          <text><![CDATA[Don't have to love them, just read them<br>]]></text>
+        </item>
+        <item id="2" time="8.359">
+          <text><![CDATA[Respect them for what they are:<br>]]></text>
+        </item>
+        <item id="3" time="10.632">
+          <text><![CDATA[		A critical tool in pesticide management<br>]]></text>
+        </item>
+        <item id="4" time="13.27">
+          <text><![CDATA[		A job well done VS. a major botch-up<br>]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[Although they can be confusing, the last word is this:  <b>give labels a chance</b>.  You don't have to love them to read them.  Just respect them for what they are:  A critical tool  in pesticide management. The difference between a job well done and a major botch-up.]]></caption>
+    </page>
+    <page id="0070" images="1" file="l1_7.swf">
+      <heading><![CDATA[About This Lesson  ]]></heading>
+      <subHeading><![CDATA[]]></subHeading>
+      <items>
+        <item id="1" time="15">
+          <text><![CDATA[<i>(Hold your mouse over each one                                                     of these areas of the label to view                                                   the area in detail.)<i/>]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[A pesticide label has 9 required areas.  On the job, you'll be dealing with all 9 of these areas. In order to help you digest all the important material about the label, this lesson has been divided into two parts.  In Part 1, you'll learn about the label in general, and about the first 6 required areas.  Hold your mouse over each one of these areas in the graphic to view the area in detail.]]></caption>
+    </page>
+    <page id="0080" images="1" file="l1_8.swf">
+      <heading><![CDATA[Objectives]]></heading>
+      <subHeading><![CDATA[In This Lesson You Will Learn to:]]></subHeading>
+      <items>
+        <item id="1" time="0.5">
+          <text><![CDATA[Identify the role and importance of the label in preparing for a pesticide application.<br>]]></text>
+        </item>
+        <item id="2" time="1.0">
+          <text><![CDATA[Correctly identify the first 6 of the 9 required content areas of a pesticide label.]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[In this lesson you will learn to: appreciate the critical value and importance of labels when preparing for a pesticide mission and correctly identify the first 6 of the 9 required content areas of a label, so that you can read a label with ease and confidence.]]></caption>
+    </page>
+    <page id="0090" images="1" file="l1_9.swf">
+      <heading><![CDATA[Prepare! Prepare! Prepare!]]></heading>
+      <subHeading><![CDATA[Preparing for a Pesticide Application]]></subHeading>
+      <items>
+        <item id="1" time="7.967">
+          <text><![CDATA[Appears to be a daunting task<br>]]></text>
+        </item>
+        <item id="2" time="10.684">
+          <text><![CDATA[Key to any pesticide application: meticulous preparation]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[Captain O'Brien is preparing for a pesticide application to control mosquitoes at Fort Fenomenal. Preparing to apply pesticides appears to be a daunting task.  Meticulous preparation will make the task more manageable and is essential to ensure a safe and effective application.]]></caption>
+    </page>
+    <page id="0100" images="1" file="l1_10.swf">
+      <heading><![CDATA[Prepare! Prepare! Prepare!]]></heading>
+      <subHeading><![CDATA[Essentials for Proper Application]]></subHeading>
+      <items>
+        <item id="1" time="5.878">
+          <text><![CDATA[Need to have the right equipment<br>]]></text>
+        </item>
+        <item id="2" time="7.236">
+          <text><![CDATA[Calculate the proper amounts<br>]]></text>
+        </item>
+        <item id="3" time="9.012">
+          <text><![CDATA[Mix them up correctly<br>]]></text>
+        </item>
+        <item id="4" time="10.71">
+          <text><![CDATA[Know what pesticide is best to use for the job<br>]]></text>
+        </item>
+        <item id="5" time="20.428">
+          <text><![CDATA[You are liable for:<br>]]></text>
+        </item>
+        <item id="6" time="21.159">
+          <text><![CDATA[		Environmental damage<br>]]></text>
+        </item>
+        <item id="7" time="22.57">
+          <text><![CDATA[		Harm to people and pets<br>]]></text>
+        </item>
+        <item id="8" time="24.189">
+          <text><![CDATA[		Property damage<br>]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[So many things can go wrong.  It is difficult to apply pesticide.  You have to get the right equipment, calculate the proper amounts, mix them up correctly, and know what pesticide is best to use for the job. There are so many different things to consider.  Accidents can happen, and even if you are working for the government, you are liable for environmental damage, harm to people and pets, even stains on someone's car that ruin a paint job.<i>(Click on the button titled "when things go wrong" for a real-life example of a pesticide disaster)</i>.]]></caption>
+    </page>
+    <page id="0110" images="1" file="l1_11.swf">
+      <heading><![CDATA[Prepare! Prepare! Prepare!]]></heading>
+      <subHeading><![CDATA[About Pesticides]]></subHeading>
+      <items>
+        <item id="1" time="1.567">
+          <text><![CDATA[<font color="#0000ff"><a href="javascript:session.showGlossaryTerm('Biologically Active')"> Biologically active</a></font>--can cause harm to living organisms<br>]]></text>
+        </item>
+        <item id="2" time="6.504">
+          <text><![CDATA[Potential for environmental damage]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[Pesticides are very biologically active chemicals. That can cause harm to living organisms. There is always the potential to cause environmental damage, such as depicted in this photo.]]></caption>
+    </page>
+    <page id="0120" images="1" file="l1_12.swf">
+      <heading><![CDATA[Prepare! Prepare! Prepare!]]></heading>
+      <subHeading><![CDATA[About Pesticides]]></subHeading>
+      <items>
+        <item id="1" time="0">
+          <text><![CDATA[<font color="#666666">Biologically active--can cause harm to living organisms<br>]]></text>
+        </item>
+        <item id="2" time="0">
+          <text><![CDATA[Potential for environmental damage<br></font>]]></text>
+        </item>
+        <item id="3" time="6.949">
+          <text><![CDATA[Risks to human health<br>]]></text>
+        </item>
+        <item id="4" time="16.327">
+          <text><![CDATA[		Harm to self<br>]]></text>
+        </item>
+        <item id="5" time="16.953">
+          <text><![CDATA[		Harm to bystanders]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[In addition to the risk of environmental damage, Captain O'Brien is also keenly aware that pesticides pose a risk to human health.  Although the risk of harming human beings is small, if pesticides are used incorrectly, careless applicators might accidentally injure themselves or bystanders.]]></caption>
+    </page>
+    <page id="0130" images="1" file="l1_13.swf">
+      <heading><![CDATA[Pesticides Not Fail-Safe ]]></heading>
+      <subHeading><![CDATA[Failed Applications]]></subHeading>
+      <items>
+        <item id="1" time="9.509">
+          <text><![CDATA[Choosing the wrong pesticide for the task<br>]]></text>
+        </item>
+        <item id="2" time="12.069">
+          <text><![CDATA[Misapplying the correct pesticide<br>]]></text>
+        </item>
+        <item id="3" time="14.237">
+          <text><![CDATA[Failing to achieve desired result<br>]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[Another issue the Captain considers is the potential for a failed application.  Pesticides are NOT fail-safe chemicals.   A careless applicator could choose the wrong pesticide for the task or, misapply the correct pesticide, and fail to achieve the desired effect.]]></caption>
+    </page>
+    <page id="0140" images="1" file="l1_14.swf">
+      <heading><![CDATA[Under Use, Not a Legal Violation]]></heading>
+      <subHeading><![CDATA[Consequences of a Failed Application]]></subHeading>
+      <items>
+        <item id="1" time="15.909">
+          <text><![CDATA[Wastes time and materials<br>]]></text>
+        </item>
+        <item id="2" time="18.521">
+          <text><![CDATA[Needless harm to people and property from uncontrolled pests<br>]]></text>
+        </item>
+        <item id="3" time="24.66">
+          <text><![CDATA[Contributes to <font color="#0000ff"><a href="javascript:session.showGlossaryTerm('Pesticide Resistance')">pesticide resistance</a></font>]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[The Captain knows that a failed application from under use of pesticide is not a legal violation, however, a failed application due to overuse is ALWAYS a legal violation.  In any case, failed applications waste both time and materials, and may needlessly expose people or property to damage from pest activity. Failed applications also contribute to the development of pesticide resistance.]]></caption>
+    </page>
+    <page id="0150" images="1" file="l1_15.swf">
+      <heading><![CDATA[About the Label  ]]></heading>
+      <subHeading><![CDATA[The Label: the Essential Reference]]></subHeading>
+      <items></items>
+      <caption><![CDATA[Captain O'Brien knows that there is a vast amount of information and guidance available about pesticides and their usage.  But the ESSENTIAL reference is the pesticide label itself.]]></caption>
+    </page>
+    <page id="0160" images="1" file="l1_16.swf">
+      <heading><![CDATA[About the Label]]></heading>
+      <subHeading><![CDATA[Legally Binding]]></subHeading>
+      <items>
+        <item id="1" time="1.567">
+          <text><![CDATA[EPA-approved label:<br>]]></text>
+        </item>
+        <item id="2" time="1.567">
+          <text><![CDATA[	Required by law since 1972<br>]]></text>
+        </item>
+        <item id="3" time="17.215">
+          <text><![CDATA[	Any application contrary to the label is <font color="#0000ff"><a href="javascript:session.showGlossaryTerm('Illegal Application')">Illegal</a></font><br>]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[Since 1972 the federal government has required that all pesticides sold within the United States bear an EPA-approved label. Thus, pesticide labels became legal documents.  This means <b>the label is the law!</b> Furthermore, any pesticide application that is contrary to the directions found on the label is considered an illegal operation.]]></caption>
+    </page>
+    <page id="0170" images="1" file="l1_17.swf">
+      <heading><![CDATA[About the Label]]></heading>
+      <subHeading><![CDATA[Labels Represent Big Bucks]]></subHeading>
+      <items>
+        <item id="1" time="3.109">
+          <text><![CDATA[Considered the most expensive literature available<br>]]></text>
+        </item>
+        <item id="2" time="8.725">
+          <text><![CDATA[At least $30 million for research that leads to the wording on ONE label]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[The information found on pesticide labels is considered the most expensive literature available. Pesticide manufacturers spend at least 30 million dollars conducting the research that ultimately leads to the wording on ONE label.]]></caption>
+    </page>
+    <page id="0180" images="1" file="l1_18.swf">
+      <heading><![CDATA[About the Label]]></heading>
+      <subHeading><![CDATA[Collaboration of Many Experts]]></subHeading>
+      <items>
+        <item id="1" time="0.601">
+          <text><![CDATA[A single pesticide label represents the work of:<br>]]></text>
+        </item>
+        <item id="2" time="5.46">
+          <text><![CDATA[		<font color="#0000ff"><a href="javascript:session.showGlossaryTerm('Chemists')">Chemists</a></font><br>]]></text>
+        </item>
+        <item id="3" time="6.165">
+          <text><![CDATA[		<font color="#0000ff"><a href="javascript:session.showGlossaryTerm('Entomologists')">Entomologists</a></font><br>]]></text>
+        </item>
+        <item id="4" time="7.184">
+          <text><![CDATA[		<font color="#0000ff"><a href="javascript:session.showGlossaryTerm('Pathologists')">Pathologists</a></font><br>]]></text>
+        </item>
+        <item id="5" time="8.438">
+          <text><![CDATA[		<font color="#0000ff"><a href="javascript:session.showGlossaryTerm('Toxicologists')">Toxicologists</a></font><br>]]></text>
+        </item>
+        <item id="6" time="9.613">
+          <text><![CDATA[		Weed scientists<br>]]></text>
+        </item>
+        <item id="7" time="11.128">
+          <text><![CDATA[		Others in industry, universities, and government<br>]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[A single pesticide label represents the work of laboratory and field scientists, including chemists, entomologists, pathologists, toxicologists, weed scientists and others in industry, universities, and government.  All these specialists devote years of research to determine how a pesticide may be used in a safe and effective manner.]]></caption>
+    </page>
+    <page id="0190" images="1" file="l1_19.swf">
+      <heading><![CDATA[About the Label and the Pesticide Applicator]]></heading>
+      <subHeading><![CDATA[Follow the Label Instructions to the "Tee"]]></subHeading>
+      <items>
+        <item id="1" time="1.75">
+          <text><![CDATA[Must not use pesticides in any way that violates the instructions on the label<br>]]></text>
+        </item>
+        <item id="2" time="11.886">
+          <text><![CDATA[Problems result from applications made <b>CONTRARY</b> to the directions on the label]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[Pest controllers must not use pesticides in a way that violates the instruction on the label.  The careful applicator bases his work on the pesticide label instructions.  Most pesticide problems result from applications made CONTRARY to the directions on the label.]]></caption>
+    </page>
+    <page id="0200" images="1" file="l1_20.swf">
+      <heading><![CDATA[About the Label]]></heading>
+      <subHeading><![CDATA[The 3 Main Purposes of a Pesticide Label]]></subHeading>
+      <items>
+        <item id="1" time="8.49">
+          <text><![CDATA[1. Protect the user and the general public<br>]]></text>
+        </item>
+        <item id="2" time="15.229">
+          <text><![CDATA[2. Provide necessary information<br>]]></text>
+        </item>
+        <item id="3" time="22.1">
+          <text><![CDATA[3. Minimize <font color="#0000ff"><a href="javascript:session.showGlossaryTerm('Environmental Hazard')"> environmental hazards</a></font>]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[As Captain O'Brien reviews the pesticide label, she recalls that there are three main purposes to every pesticide label:1)  To protect the pesticide user and general public from any hazard associated with the chemical.2)  To provide the pesticide user with any information necessary for a successful application.3)  To minimize environmental hazards resulting from use of the product.]]></caption>
+    </page>
+    <page id="0210" images="1" file="l1_21.swf">
+      <heading><![CDATA[About the Label]]></heading>
+      <subHeading><![CDATA[Label Comes with Pesticide]]></subHeading>
+      <items>
+        <item id="1" time="4.624">
+          <text><![CDATA[By law:<br>]]></text>
+        </item>
+        <item id="2" time="9.012">
+          <text><![CDATA[		on the container itself<br>]]></text>
+        </item>
+        <item id="3" time="11.18">
+          <text><![CDATA[		securely attached to the container<br>]]></text>
+        </item>
+        <item id="4" time="13.61">
+          <text><![CDATA[		on any wrapper on outside containers<br>]]></text>
+        </item>
+        <item id="5" time="16.953">
+          <text><![CDATA[Additional labels must be supplied upon request]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[The Captain doesn't have to search for a pesticide label.  By law, all pesticide manufacturers must provide the label on the immediate pesticide container or securely attached to that container and on any wrapper or outside containers.  In addition, the manufacturer is required to supply additional labels to any purchaser upon request.]]></caption>
+    </page>
+    <page id="0220" images="1" file="l1_22.swf">
+      <heading><![CDATA[About the Characters]]></heading>
+      <subHeading><![CDATA[Skeeter and Willie]]></subHeading>
+      <items></items>
+      <caption><![CDATA[From time to time you will take a look at the pest application misadventures of Skeeter and Willie.  These characters are wholly fictional and designed solely to illustrate teaching points.]]></caption>
+    </page>
+    <page id="0230" images="1" file="l1_23.swf">
+      <heading><![CDATA[The ANTics of Skeeter and Willie]]></heading>
+      <subHeading><![CDATA[ ]]></subHeading>
+      <items></items>
+      <caption><![CDATA[While Capt. O'Brien prepares for her pesticide application, across town, at Fort Runamuck, ace pest controller, Skeeter is also planning a pesticide application.  Skeeter is preparing to wipe out an infestation of fire ants on the parade field, because the Boy Scouts will be holding their annual jamboree on the field this weekend.  Skeeter has already looked through the pesticides on his shelf, and has decided to spray with a liquid he bought from his friend Willie.  Willie says he invented this liquid by experimentation in his garage.  According to Willie, it's deadly to fire ants and completely safe to use.  He plans to market the new pesticide at flea markets across the United States, using the trade name "Faar Ain'ts Be Dammed".]]></caption>
+    </page>
+    <page id="0240" images="1" file="l1_qt.swf">
+      <heading><![CDATA[The ANTics of Skeeter and Willie]]></heading>
+      <subHeading><![CDATA[What's Your Advice to Skeeter?]]></subHeading>
+      <items>
+        <item id="1" time="0">
+          <text><![CDATA[Should Skeeter use the homebrewed insecticide?]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[]]></caption>
+      <question id="1">
+        <questionText><![CDATA[]]></questionText>
+        <answers>
+          <answer id="A" correct="false">
+            <answerText><![CDATA[Use Faar Ain'ts Be Dammed.  Willie is a clever guy and he probably knows more about killing fire ants than some pinhead at a chemical plant.]]></answerText>
+            <feedbackText><![CDATA[Incorrect.  “Faar Ain’ts Be Dammed is NOT a registered pesticide and Skeeter knows nothing about the chemical.]]></feedbackText>
+          </answer>
+          <answer id="B" correct="false">
+            <answerText><![CDATA[Try to buy into Willie's invention.  Faar Ain'ts Be Dammed sounds like a big seller and Skeeter might end up as a wealthy man.]]></answerText>
+            <feedbackText><![CDATA[Incorrect.  Selling unregistered pesticides is a violation of State and Federal law.]]></feedbackText>
+          </answer>
+          <answer id="C" correct="true">
+            <answerText><![CDATA[Run, Skeeter, Run!! Don't risk the wrath of the EPA by using this unregistered product! The unknown material may be harmful to human health and/or the environment.]]></answerText>
+            <feedbackText><![CDATA[Skeeter should immediately remove the material from Fort Runamok and use a properly labeled pesticide for fire ant control.]]></feedbackText>
+          </answer>
+          <answer id="D" correct="false">
+            <answerText><![CDATA[Don't use Faar Ain'ts Be Dammed for such a big project yet, but try testing the material on small jobs around Fort Runamuck to see how it works.]]></answerText>
+            <feedbackText><![CDATA[Incorrect.  Testing of new pesticides requires special permits and EPA supervision.]]></feedbackText>
+          </answer>
+        </answers>
+        <helpText><![CDATA[]]></helpText>
+      </question>
+    </page>
+    <page id="0250" images="1" file="l1_25.swf">
+      <heading><![CDATA[The Label Must Be Readable]]></heading>
+      <subHeading><![CDATA[Formatting Guidelines]]></subHeading>
+      <items></items>
+      <caption><![CDATA[Let's talk about general guidelines for label construction.  The wording of a pesticide label must not be crowded or obscured.  The words must be large enough to be read by anyone with normal vision. To further ensure that label instructions are readable, the words of a label are printed on a clear, background that contrasts with the color used for the text. Pesticide labels contain a great deal of technical information derived from the combined input of all those experts, but the language used on the label is simple, aimed at the reading level of the ordinary person.]]></caption>
+    </page>
+    <page id="0260" images="1" file="l1_26.swf">
+      <heading><![CDATA[The Required Areas]]></heading>
+      <subHeading><![CDATA[The 9 Content Areas of a Label]]></subHeading>
+      <items></items>
+      <caption><![CDATA[The information provided on pesticide labels must include <b>nine required content areas, six of which are covered in this lesson, the remainder in part 2</b>. The label usually includes additional information as well.<br>The 9 content areas are only required <i>when applicable</i>.  Before looking at an actual label, keep in mind that these required areas will apply to some types of pesticides and not others. Not every label will contain all nine content areas --only the content areas applicable to that type of pesticide. For example:  Vikane, a very lethal pesticide used to kill dry wood termites, must have a <i>Restrictions for Use</i> statement.  However, Agnique, an <font color="#0000ff"><a href="javascript:session.showGlossaryTerm('unclassified pesticides')"> unclassified pesticide</a></font> that is available to the general public, will not have a <i>Restrictions for Use</i> statements, as it doesn't need one.]]></caption>
+    </page>
+    <page id="0270" images="1" file="l1_27.swf">
+      <heading><![CDATA[The Required Areas]]></heading>
+      <subHeading><![CDATA[ ]]></subHeading>
+      <items></items>
+      <caption><![CDATA[This table shows all nine content areas, and how they apply to the pesticide <i>Agnique MMF</i>.  Captain O'Brien is going to review each of these areas to be certain she fully understands the proper use of this pesticide. Why don't you take a moment to explore the required areas of the label with her?]]></caption>
+    </page>
+    <page id="0280" images="1" file="l1_28.swf">
+      <heading><![CDATA[The 9 Content Areas of a Label]]></heading>
+      <subHeading><![CDATA[Area 1: Product Brand Name]]></subHeading>
+      <items></items>
+      <caption><![CDATA[Today the Captain is preparing to control mosquito larvae, immature insects living in standing water. She begins to review the label for <i>Agnique</i>, a pesticide especially designed for controlling immature mosquitoes and midges.  Captain O'Brien finds the product or brand name, <i>Agnique</i>, at the top of the label.]]></caption>
+    </page>
+    <page id="0290" images="1" file="l1_29_pop.swf">
+      <heading><![CDATA[Pop Question]]></heading>
+      <subHeading><![CDATA[ ]]></subHeading>
+      <items>
+        <item id="1" time="0">
+          <text><![CDATA[Find the product name identified on the label shown below.]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[]]></caption>
+      <question id="1">
+        <questionText><![CDATA[]]></questionText>
+        <answers>
+          <answer id="A" correct="true">
+            <answerText><![CDATA[Merit 0.5 G]]></answerText>
+            <feedbackText><![CDATA[This is a label for the pesticide, Merit.]]></feedbackText>
+          </answer>
+          <answer id="B" correct="false">
+            <answerText><![CDATA[Insecticide]]></answerText>
+            <feedbackText><![CDATA[No.  While Merit is an insecticide, this is simply a generic term for a pesticide category.]]></feedbackText>
+          </answer>
+          <answer id="C" correct="false">
+            <answerText><![CDATA[Active Ingredient]]></answerText>
+            <feedbackText><![CDATA[No.  “Active ingredient” is not the product name.]]></feedbackText>
+          </answer>
+          <answer id="D" correct="false">
+            <answerText><![CDATA[Imidacloprid]]></answerText>
+            <feedbackText><![CDATA[Sorry.  Imidacloprid is the active ingredient of Merit.]]></feedbackText>
+          </answer>
+        </answers>
+        <helpText><![CDATA[]]></helpText>
+      </question>
+    </page>
+    <page id="0300" images="1" file="l1_30.swf">
+      <heading><![CDATA[The 9 Content Areas of a Label]]></heading>
+      <subHeading><![CDATA[Area 1:  Product (Brand Name)]]></subHeading>
+      <items>
+        <item id="1" time="1.202">
+          <text><![CDATA[Manufacturers often include additional information about the pesticide after the product name<br>]]></text>
+        </item>
+        <item id="2" time="7.184">
+          <text><![CDATA[Additional Information:<br>]]></text>
+        </item>
+        <item id="3" time="8.62">
+          <text><![CDATA[		Type<br>]]></text>
+        </item>
+        <item id="4" time="9.43">
+          <text><![CDATA[		Formulation<br>]]></text>
+        </item>
+        <item id="5" time="10.214">
+          <text><![CDATA[		Percentage/pounds of active ingredient]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[Sometimes the manufacturer provides additional information about the pesticides after the product name.  Such additional information as the type, formulation, percentage or pounds of active ingredient may be provided.  Look at the brand name on the label of the pesticide, <i>Merit</i>.   Here, the manufacturer is providing the additional information that <i>Merit</i> is a granular formulation with a zero point five percent active ingredient.]]></caption>
+    </page>
+    <page id="0310" images="1" file="l1_31_pop.swf">
+      <heading><![CDATA[Pop Question]]></heading>
+      <subHeading><![CDATA[ ]]></subHeading>
+      <items>
+        <item id="1" time="0">
+          <text><![CDATA[What is the formulation of <i>Merit</i>? ]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[]]></caption>
+      <question id="1">
+        <questionText><![CDATA[]]></questionText>
+        <answers>
+          <answer id="A" correct="false">
+            <answerText><![CDATA[Flowable]]></answerText>
+            <feedbackText><![CDATA[Incorrect.  Flowables are usually identified by the abbreviation F.]]></feedbackText>
+          </answer>
+          <answer id="B" correct="false">
+            <answerText><![CDATA[Emulsifiable concentrate]]></answerText>
+            <feedbackText><![CDATA[No.  Emulsifiable concentrates are usually identified by the abbreviation E or EC.]]></feedbackText>
+          </answer>
+          <answer id="C" correct="true">
+            <answerText><![CDATA[Water soluble packet]]></answerText>
+            <feedbackText><![CDATA[Water soluble packets are identified by the abbreviation WSP.]]></feedbackText>
+          </answer>
+          <answer id="D" correct="false">
+            <answerText><![CDATA[Granular]]></answerText>
+            <feedbackText><![CDATA[Sorry.  Granular pesticides are usually identified by the abbreviation G.]]></feedbackText>
+          </answer>
+        </answers>
+        <helpText><![CDATA[]]></helpText>
+      </question>
+    </page>
+    <page id="0320" images="1" file="l1_32.swf">
+      <heading><![CDATA[The ANTics of Skeeter and Willie]]></heading>
+      <subHeading><![CDATA[ ]]></subHeading>
+      <items></items>
+      <caption><![CDATA[Oddly enough, Skeeter has been reviewing the label for <i>Agnique MMF</i> as well.  He's decided that <i>Agnique</i> is probably a Latin word meaning "AGONY", and MMF means "Many More Effects".  He's considering using <i>Agnique</i> against the stable flies that are currently plaguing animals in the barn at Fort Runamuck.  He thinks the flies deserve anything they might get in the way of pain.]]></caption>
+    </page>
+    <page id="0330" images="1" file="l1_33_pop.swf">
+      <heading><![CDATA[The ANTics of Skeeter and Willie]]></heading>
+      <subHeading><![CDATA[What's Your Advice to Skeeter?]]></subHeading>
+      <items>
+        <item id="1" time="0">
+          <text><![CDATA[Will this application of <i>Agnique</i> on stable flies succeed?<BR><i>(Click on the label icon to reference the label document.)</i><br>]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[]]></caption>
+      <question id="1">
+        <questionText><![CDATA[]]></questionText>
+        <answers>
+          <answer id="A" correct="false">
+            <answerText><![CDATA[Why not?  Mosquitoes are flies and Agnique kills mosquitoes.]]></answerText>
+            <feedbackText><![CDATA[Incorrect. Agnique MMF is designed to kill larval mosquitoes, not adult stable flies in a barn. Using Agnique MMF to treat a barn would constitute an illegal application because the site is not listed on the label.]]></feedbackText>
+          </answer>
+          <answer id="B" correct="false">
+            <answerText><![CDATA[I'm not sure.  Isn't Agnique a larvacide used in water?]]></answerText>
+            <feedbackText><![CDATA[You’re partially right, but this is not the BEST answer. Stable fly larvae don’t live in water, so Agnique MMF doesn't kill them. Besides, using Agnique MMF to treat a barn would constitute an illegal application because the site is not listed on the label.]]></feedbackText>
+          </answer>
+          <answer id="C" correct="true">
+            <answerText><![CDATA[Not a chance. In fact, Agnique isn't labeled for application in stables at ALL!]]></answerText>
+            <feedbackText><![CDATA[Best answer! Using Agnique MMF to treat a barn would constitute an illegal application because the site is not listed on the label.]]></feedbackText>
+          </answer>
+        </answers>
+        <helpText><![CDATA[]]></helpText>
+      </question>
+    </page>
+    <page id="0340" images="1" file="l1_34.swf">
+      <heading><![CDATA[The 9 Content Areas of a Label]]></heading>
+      <subHeading><![CDATA[Area 2: Name and Address of Producer]]></subHeading>
+      <items>
+        <item id="1" time="0">
+          <text><![CDATA[The name and address of the producer or registrant are required on all labels]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[The second required content area that you need to look for on the pesticide label is the <b>name and address</b> of the producer, registrant, or person for whom the pesticide was made.  Captain O'Brien looks at the <i>Agnique</i> label and sees that the name of the producer is:  Henkel Corporation at 4900 Este Avenue, Cincinnati, Ohio, 45232-1419.]]></caption>
+    </page>
+    <page id="0350" images="1" file="l1_35.swf">
+      <heading><![CDATA[The 9 Content Areas of a Label]]></heading>
+      <subHeading><![CDATA[Area 2: Name and Address of Producer]]></subHeading>
+      <items>
+        <item id="1" time="4.78">
+          <text><![CDATA[If the <font color="#0000ff"><a href="javascript:session.showGlossaryTerm('Registrant')">Registrant</a></font> is not the <font color="#0000ff"><a href="javascript:session.showGlossaryTerm('Producer')">producer</a></font>, the name and address must include qualifiers such as:<br>]]></text>
+        </item>
+        <item id="2" time="10.124">
+          <text><![CDATA[		packed for<br>]]></text>
+        </item>
+        <item id="3" time="11.363">
+          <text><![CDATA[		distributed by<br>]]></text>
+        </item>
+        <item id="4" time="12.539">
+          <text><![CDATA[		sold by]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[What if the registrant of the pesticide is <b>NOT</b> the producer? If the registrant is not the producer, the name and address must include qualifiers such as:  <i>packed for</i>, <i>distributed by</i>, or <i>sold by</i>, to show that the name on the label is not that of the actual producer.]]></caption>
+    </page>
+    <page id="0360" images="1" file="l1_36_pop.swf">
+      <heading><![CDATA[Pop Question]]></heading>
+      <subHeading><![CDATA[ ]]></subHeading>
+      <items>
+        <item id="1" time="0">
+          <text><![CDATA[Who is the producer of this material?<BR><i>(Click on the label icon to open the PDF version<BR>of the <i>Merit</i> label, and reference page 4.)</i>]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[]]></caption>
+      <question id="1">
+        <questionText><![CDATA[]]></questionText>
+        <answers>
+          <answer id="A" correct="false">
+            <answerText><![CDATA[Henkel Corporation, Cincinnati, OH]]></answerText>
+            <feedbackText><![CDATA[No. Henkel Corp. produces Agnique MMF. Bayer is the producer of Merit insecticide.]]></feedbackText>
+          </answer>
+          <answer id="B" correct="true">
+            <answerText><![CDATA[Bayer Corporation, Kansas City, MO]]></answerText>
+            <feedbackText><![CDATA[Right! Bayer is the producer of Merit insecticide.]]></feedbackText>
+          </answer>
+          <answer id="C" correct="false">
+            <answerText><![CDATA[Syngenta Professional Products, Wilmington, DE]]></answerText>
+            <feedbackText><![CDATA[No. Syngenta Professional Products makes Demand Pestab. Bayer is the producer of Merit insecticide.]]></feedbackText>
+          </answer>
+          <answer id="D" correct="false">
+            <answerText><![CDATA[Dow AgroSciences LLC, Indianapolis, IN]]></answerText>
+            <feedbackText><![CDATA[Incorrect. Dow AgroSciences is the producer of Vikane fumigant. Bayer is the producer of Merit insecticide.]]></feedbackText>
+          </answer>
+        </answers>
+        <helpText><![CDATA[]]></helpText>
+      </question>
+    </page>
+    <page id="0370" images="1" file="l1_37.swf">
+      <heading><![CDATA[The 9 Content Areas of a Label]]></heading>
+      <subHeading><![CDATA[Area 3: Net Contents]]></subHeading>
+      <items>
+        <item id="1" time="7.367">
+          <text><![CDATA[Label must bear net weight or measure of content<br>]]></text>
+        </item>
+        <item id="2" time="13.793">
+          <text><![CDATA[Product only (does not include wrappers or other materials)<br>]]></text>
+        </item>
+        <item id="3" time="18.286">
+          <text><![CDATA[Average weight of the contents, unless explicitly stated as a minimum quantity<br>]]></text>
+        </item>
+        <item id="4" time="23.432">
+          <text><![CDATA[Actual contents will vary SLIGHTLY due to imperfections in manufacturing techniques]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[The third required content area of a label is the <b>Net Contents</b> of a pesticide container. Each pesticide label must bear a statement describing the net weight or measure of content.  The weight or measure does not include wrappers or other materials.  It is the product only, the average content, unless explicitly stated as a minimum quantity. (The actual content of each container will vary SLIGHTLY because of imperfections in manufacturing techniques.)]]></caption>
+    </page>
+    <page id="0380" images="1" file="l1_38.swf">
+      <heading><![CDATA[The 9 Content Areas of a Label]]></heading>
+      <subHeading><![CDATA[Area 3: Net Contents]]></subHeading>
+      <items></items>
+      <caption><![CDATA[For example, Captain O'Brien is planning a fairly large mosquito larvaciding project and needs a large amount of pesticide for the job.  The statement "Net Contents 2.5 Gallons" appears on each container of <i>Agnique MMF</i> she's assembled for the job.  On another, much smaller project, for controlling mosquito larvae in waste tires, she might have used a small spray bottle of <i>Agnique MMF</i> with the statement "1.05 quarts or 1 liter" on the label.]]></caption>
+    </page>
+    <page id="0390" images="1" file="l1_39.swf">
+      <heading><![CDATA[The ANTics of Skeeter and Willie]]></heading>
+      <subHeading><![CDATA["Net Contents" Woes]]></subHeading>
+      <items></items>
+      <caption><![CDATA[It so happens that at this very minute, Skeeter is working overtime trying to understand the Net Contents statement on <i>Demand Pestab</i>, so he can record how much pesticide he used during his recent application.]]></caption>
+    </page>
+    <page id="0400" images="1" file="l1_40.swf">
+      <heading><![CDATA[The ANTics of Skeeter and Willie]]></heading>
+      <subHeading><![CDATA["Net Contents" Woes]]></subHeading>
+      <items></items>
+      <caption><![CDATA[Skeeter's been staring at the label for some time when Willie walks in. The Net Contents read 40 X 0.2 ounces (5.65 gram)  tablets, and in Skeeter's opinion, that doesn't help much. Fortunately, Willie has a lot of experience working in his laboratory in the garage, and he realizes that "gram"  is a unit of the metric system.  After a brief and frustrating few minutes of explanation by Willie, the boys retire to their favorite after work hangout for some intensive tutoring.]]></caption>
+    </page>
+    <page id="0410" images="1" file="l1_41.swf">
+      <heading><![CDATA[The ANTics of Skeeter and Willie]]></heading>
+      <subHeading><![CDATA["Net Contents" Woes]]></subHeading>
+      <items></items>
+      <caption><![CDATA[After hearing Willie explain the use of metric units, Skeeter notes that 16-ounce measurement on his bottle and wonders aloud, <i>"what in the 'hail'</i> would we do if rootbeer were measured in metric units"!  On that sobering note, the boys lapse into a massive silence, each one trying to imagine how to handle Skeeter's problem at work with <i>Demand Pestab</i>.]]></caption>
+    </page>
+    <page id="0420" images="1" file="l1_42.swf">
+      <heading><![CDATA[The ANTics of Skeeter and Willie]]></heading>
+      <subHeading><![CDATA["Net Contents" Woes]]></subHeading>
+      <items></items>
+      <caption><![CDATA[The problem is this: Skeeter and Willie can easily <i>use Demand Pestab</i>, because the instructions are based on a certain number of tablets per application.  But they can't  accurately <i>record</i> or <i>report</i> the application until they learn something about both the British and the Metric systems of measurement.]]></caption>
+    </page>
+    <page id="0430" images="1" file="l1_qt.swf">
+      <heading><![CDATA[The ANTics of Skeeter and Willie]]></heading>
+      <subHeading><![CDATA[What's Your Advice to Skeeter?]]></subHeading>
+      <items>
+        <item id="1" time="0">
+          <text><![CDATA[Right now, for example, Skeeter knows he and Willie have applied 40 Demand Pestabs, and he's read that each Pestab weighs 0.2 ounces or 5.65 grams.  How much <i>Pestab</i> has actually been applied? (40 <i>Pestab</i> used; 1 <i>Pestab</i> = 0.2oz or 5.6 grams).]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[]]></caption>
+      <question id="1">
+        <questionText><![CDATA[]]></questionText>
+        <answers>
+          <answer id="A" correct="false">
+            <answerText><![CDATA[0.2 ounces X 40 tablets = 8 ounces, or about the volume of soda in an old-fashioned soda can.]]></answerText>
+            <feedbackText><![CDATA[Incorrect. Ounces can measure 2 different things: weight or volume. In this case the solid Pestab tablets are measured in weight, not volume.]]></feedbackText>
+          </answer>
+          <answer id="B" correct="false">
+            <answerText><![CDATA[0.2 X 5.65 grams X 40 tablets  = 45.2 ounce-gram-tablets.]]></answerText>
+            <feedbackText><![CDATA[No. That’s wrong, and I have no idea what you’re talking about! The solid Pestab tablets are measured in weight, not volume.]]></feedbackText>
+          </answer>
+          <answer id="C" correct="false">
+            <answerText><![CDATA[There are 40 tablets per box, so the boys have applied ONE BOX!]]></answerText>
+            <feedbackText><![CDATA[No. Saying ONE BOX doesn’t clear things up very much. In fact, there is no such measure in mathematics. In this case the solid Pestab tablets are measured in weight, not volume.]]></feedbackText>
+          </answer>
+          <answer id="D" correct="true">
+            <answerText><![CDATA[0.2 ounces X 40 tablets = 8 ounces, or ½ pound weight.]]></answerText>
+            <feedbackText><![CDATA[Correct! You realized that ounces can mean 2 things; weight or volume. The solid Pestab tablets are measured in weight, not volume.]]></feedbackText>
+          </answer>
+        </answers>
+        <helpText><![CDATA[]]></helpText>
+      </question>
+    </page>
+    <page id="0440" images="1" file="l1_44.swf">
+      <heading><![CDATA[The 9 Content Areas of a Label]]></heading>
+      <subHeading><![CDATA[Area 4: Product Registration Number]]></subHeading>
+      <items>
+        <item id="1" time="4.441">
+          <text><![CDATA[All U.S. pesticides are registered by the <font color="#0000ff"><a href="javascript:session.showGlossaryTerm('EPA')"> Environmental Protection Agency</a></font>, and must bear a registration number<br>]]></text>
+        </item>
+        <item id="2" time="22.0">
+          <text><![CDATA[These numbers are always preceded by the phrase<br>"EPA Reg. No. or <font color="#0000ff"><a href="javascript:session.showGlossaryTerm('EPA Registration Number')">EPA Registration No.</a></font>"]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[The fourth area of a label is the registration number.  All the pesticides used in the United States are registered by the Environmental Protection Agency, and the label must bear a registration number. Captain O'Brien looks for the registration number of <i>Agnique</i> and finds the number 2302-14.  These numbers are always preceded by the phrase "EPA Reg. No." or "EPA Registration No."]]></caption>
+    </page>
+    <page id="0450" images="1" file="l1_45.swf">
+      <heading><![CDATA[The 9 Content Areas of a Label]]></heading>
+      <subHeading><![CDATA[Area 4: Registration Number]]></subHeading>
+      <items>
+        <item id="1" time="4.31">
+          <text><![CDATA[Each registration number is unique to a given pesticide<br>]]></text>
+        </item>
+        <item id="2" time="9.195">
+          <text><![CDATA[The same pesticide would receive two different registration numbers if manufactured by two different companies]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[The registration number is similar to our social security number, in that each registration number is unique to a given pesticide.  In fact, the same pesticide would receive two different registration numbers if manufactured by two different companies.]]></caption>
+    </page>
+    <page id="0460" images="1" file="l1_46.swf">
+      <heading><![CDATA[The 9 Content Areas of a Label]]></heading>
+      <subHeading><![CDATA[Area 4: Registration Number]]></subHeading>
+      <items>
+        <item id="1" time="1.985">
+          <text><![CDATA[The one ESSENTIAL piece of information we need to correctly identify pesticides<br>]]></text>
+        </item>
+        <item id="2" time="7.34">
+          <text><![CDATA[Used for:<br>]]></text>
+        </item>
+        <item id="3" time="8.02">
+          <text><![CDATA[		Pesticide inventories<br>]]></text>
+        </item>
+        <item id="4" time="9.43">
+          <text><![CDATA[		To track usage<br>]]></text>
+        </item>
+        <item id="5" time="11.468">
+          <text><![CDATA[		To report spills and medical emergencies]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[A pesticide would also have two different registration numbers, if manufactured by one company, but distributed by another.  The registration number is the one ESSENTIAL piece of information we need to correctly identify pesticides, so it's used for pesticide inventories, reports of pesticide usage, and in worst cases, to report spills, medical emergencies and other incidents.]]></caption>
+    </page>
+    <page id="0470" images="1" file="l1_47_pop.swf">
+      <heading><![CDATA[Pop Question]]></heading>
+      <subHeading><![CDATA[ ]]></subHeading>
+      <items>
+        <item id="1" time="0">
+          <text><![CDATA[Find the registration number on the <i>Demand Pestab</i> label.]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[]]></caption>
+      <question id="1">
+        <questionText><![CDATA[]]></questionText>
+        <answers>
+          <answer id="A" correct="true">
+            <answerText><![CDATA[10182-387]]></answerText>
+            <feedbackText><![CDATA[Correct! The EPA registration number for Demand Pestab is 10182-387.]]></feedbackText>
+          </answer>
+          <answer id="B" correct="false">
+            <answerText><![CDATA[1-800-424-9300]]></answerText>
+            <feedbackText><![CDATA[Incorrect. This is the 1-800 phone number to call in case of a chemical emergency. The EPA registration number for Demand Pestab is 10182-387.]]></feedbackText>
+          </answer>
+          <answer id="C" correct="false">
+            <answerText><![CDATA[69381-CHE-1]]></answerText>
+            <feedbackText><![CDATA[No. This is the establishment number for Demand Pestab. The EPA registration number for Demand Pestab is 10182-387.]]></feedbackText>
+          </answer>
+          <answer id="D" correct="false">
+            <answerText><![CDATA[867-5309]]></answerText>
+            <feedbackText><![CDATA[Incorrect. But for a good time call... The EPA registration number for Demand Pestab is 10182-387.]]></feedbackText>
+          </answer>
+        </answers>
+        <helpText><![CDATA[]]></helpText>
+      </question>
+    </page>
+    <page id="0480" images="1" file="l1_48.swf">
+      <heading><![CDATA[The 9 Content Areas of a Label]]></heading>
+      <subHeading><![CDATA[Area 5:  Establishment Number]]></subHeading>
+      <items>
+        <item id="1" time="6.687">
+          <text><![CDATA[Identifies the establishment where the pesticide was manufactured.<br>]]></text>
+        </item>
+        <item id="2" time="11.651">
+          <text><![CDATA[Preceded by the words,  EPA EST or <font color="#0000ff"><a href="javascript:session.showGlossaryTerm('Establishment Number')"> EPA Establishment Number</a></font>.]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[The second important number to be found on a pesticide label is in area 5, the ESTABLISHMENT number.  This number identifies the actual establishment where the pesticide was manufactured.  It is preceded by the phrase "EPA Establishment Number".  Captain O'Brien looks at the label for <i>Agnique MMF</i> and finds the establishment number is 53263-SC-01.]]></caption>
+    </page>
+    <page id="0490" images="1" file="l1_49_pop.swf">
+      <heading><![CDATA[Pop Question]]></heading>
+      <subHeading><![CDATA[Same Pesticide Produced by Two Different Factories]]></subHeading>
+      <items>
+        <item id="1" time="0">
+          <text><![CDATA[Suppose that the manufacturer of Bugzaway produces this pesticide in more than one factory.  Do you think that the establishment number for the Bugzaway produced at Factory A would be the same or different than that of the Bugzaway produced at Factory B?]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[]]></caption>
+      <question id="1">
+        <questionText><![CDATA[]]></questionText>
+        <answers>
+          <answer id="A" correct="false">
+            <answerText><![CDATA[Same]]></answerText>
+            <feedbackText><![CDATA[No. Each factory would have its own establishment number.]]></feedbackText>
+          </answer>
+          <answer id="B" correct="true">
+            <answerText><![CDATA[Different]]></answerText>
+            <feedbackText><![CDATA[Correct! Each factory would have its own establishment number.]]></feedbackText>
+          </answer>
+        </answers>
+        <helpText><![CDATA[]]></helpText>
+      </question>
+    </page>
+    <page id="0500" images="1" file="l1_50.swf">
+      <heading><![CDATA[The 9 Content Areas of a Label]]></heading>
+      <subHeading><![CDATA[Area 5: Establishment Number]]></subHeading>
+      <items>
+        <item id="1" time="2.952">
+          <text><![CDATA[The EPA requires production data from each facility<br>]]></text>
+        </item>
+        <item id="2" time="9.143">
+          <text><![CDATA[Important if a problem is identified with<br>a product manufactured in a particular factory<br>]]></text>
+        </item>
+        <item id="3" time="21.264">
+          <text><![CDATA[The establishment number may appear<br>in any suitable location:<br>]]></text>
+        </item>
+        <item id="4" time="24.268">
+          <text><![CDATA[		On the label<br>]]></text>
+        </item>
+        <item id="5" time="25.731">
+          <text><![CDATA[		On the pesticide container itself]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[The establishment number is important from a regulatory standpoint because EPA requires production data from EACH facility. The number can also be important if a problem is identified with a product manufactured in a particular factory.   In such case, the company could recall all the Bugzaway pesticide with the same establishment number. The establishment number may appear in any suitable location...on the label...or on the pesticide container itself.]]></caption>
+    </page>
+    <page id="0510" images="1" file="l1_51_pop.swf">
+      <heading><![CDATA[Pop Question]]></heading>
+      <subHeading><![CDATA[ ]]></subHeading>
+      <items>
+        <item id="1" time="0">
+          <text><![CDATA[How many establishment numbers are shown on the <i>Strike</i> label?]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[]]></caption>
+      <question id="1">
+        <questionText><![CDATA[]]></questionText>
+        <answers>
+          <answer id="A" correct="false">
+            <answerText><![CDATA[2]]></answerText>
+            <feedbackText><![CDATA[No. Count again. There are 5 establishment numbers.]]></feedbackText>
+          </answer>
+          <answer id="B" correct="false">
+            <answerText><![CDATA[3]]></answerText>
+            <feedbackText><![CDATA[No. Count again. There are 5 establishment numbers.]]></feedbackText>
+          </answer>
+          <answer id="C" correct="false">
+            <answerText><![CDATA[4]]></answerText>
+            <feedbackText><![CDATA[No. Count again. There are 5 establishment numbers.]]></feedbackText>
+          </answer>
+          <answer id="D" correct="true">
+            <answerText><![CDATA[5]]></answerText>
+            <feedbackText><![CDATA[Right! There are 5 establishment numbers.]]></feedbackText>
+          </answer>
+        </answers>
+        <helpText><![CDATA[]]></helpText>
+      </question>
+    </page>
+    <page id="0520" images="1" file="l1_52.swf">
+      <heading><![CDATA[The 9 Content Areas of a Label]]></heading>
+      <subHeading><![CDATA[Area 6: Ingredients Statement]]></subHeading>
+      <items>
+        <item id="1" time="5.616">
+          <text><![CDATA[Required on the front panel<br>]]></text>
+        </item>
+        <item id="2" time="8.385">
+          <text><![CDATA[Lists <font color="#0000ff"><a href="javascript:session.showGlossaryTerm('Active Ingredients')">active ingredients</a></font> (A.I.) name and percentage by weight<br>]]></text>
+        </item>
+        <item id="3" time="12.539">
+          <text><![CDATA[Lists<font color="#0000ff"><a href="javascript:session.showGlossaryTerm('inert ingredients')"> inert ingredients</a></font> total percentage by weight<br>]]></text>
+        </item>
+        <item id="4" time="28.682">
+          <text><![CDATA[If inert ingredients are present, active and inert ingredients must add up to 100 percent]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[The ingredients statement is required on the front panel.  It must list: Active ingredients (A.I.) - name and percentage by weight, and inert ingredients - total percentage by weight.  Captain O'Brien takes a moment to review the ingredients of <i>AGNIQUE MMF</i>.  <i>AGNIQUE MMF</i> is 100% active ingredient, so there is no statement as to the percentage of inert ingredients.  If inert ingredients are present, the active and inert ingredients must add up to 100%.]]></caption>
+    </page>
+    <page id="0530" images="1" file="l1_53_pop.swf">
+      <heading><![CDATA[Pop Question]]></heading>
+      <subHeading><![CDATA[]]></subHeading>
+      <items>
+        <item id="1" time="0">
+          <text><![CDATA[What is the percentage of inert ingredients?]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[]]></caption>
+      <question id="1">
+        <questionText><![CDATA[]]></questionText>
+        <answers>
+          <answer id="A" correct="false">
+            <answerText><![CDATA[Inert ingredient % is not mentioned on the label.]]></answerText>
+            <feedbackText><![CDATA[No.The percentage of inert ingredients is listed in the ingredient statement. Demand Pestab contains 90% inert ingredients.]]></feedbackText>
+          </answer>
+          <answer id="B" correct="false">
+            <answerText><![CDATA[10%]]></answerText>
+            <feedbackText><![CDATA[No.The percentage of inert ingredients is listed in the ingredient statement. Demand Pestab contains 90% inert ingredients.]]></feedbackText>
+          </answer>
+          <answer id="C" correct="false">
+            <answerText><![CDATA[30%]]></answerText>
+            <feedbackText><![CDATA[No.The percentage of inert ingredients is listed in the ingredient statement. Demand Pestab contains 90% inert ingredients.]]></feedbackText>
+          </answer>
+          <answer id="D" correct="true">
+            <answerText><![CDATA[90%]]></answerText>
+            <feedbackText><![CDATA[Demand Pestab contains 90% inert ingredients.]]></feedbackText>
+          </answer>
+        </answers>
+        <helpText><![CDATA[]]></helpText>
+      </question>
+    </page>
+    <page id="0540" images="1" file="l1_54.swf">
+      <heading><![CDATA[The 9 Content Areas of a Label]]></heading>
+      <subHeading><![CDATA[Area 6:  Statement of Ingredients]]></subHeading>
+      <items>
+        <item id="1" time="4.127">
+          <text><![CDATA[Percentage of inert ingredients is required<br>]]></text>
+        </item>
+        <item id="2" time="8.673">
+          <text><![CDATA[Identity of inert ingredients NOT required<br>]]></text>
+        </item>
+        <item id="3" time="15.491">
+          <text><![CDATA[Inert ingredients are a<font color="#0000ff"><a href="javascript:session.showGlossaryTerm('proprietary secrets')"> proprietary secret</a></font> <br>]]></text>
+        </item>
+        <item id="4" time="18.051">
+          <text><![CDATA[Not required by law to divulge this information, unless the ingredients pose an environmental or health hazard]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[As stated, the  manufacturer is required to identify the percentage of inert ingredients in a pesticide.  However, the manufacturer is <b>NOT</b> required to identify the inert chemicals.  Manufacturers regard the makeup of the inert ingredients as a proprietary secret, and they are not required by law to divulge this information, unless they may pose a hazard to man or environment.]]></caption>
+    </page>
+    <page id="0550" images="1" file="l1_55.swf">
+      <heading><![CDATA[Lesson Conclusion]]></heading>
+      <subHeading><![CDATA[Review Key Points]]></subHeading>
+      <items>
+        <item id="1" time="0">
+          <text><![CDATA[Review the Pesticide Labeling I Key Points document]]></text>
+        </item>
+        <item id="2" time="8">
+          <text><![CDATA[<i>(accessible from the OPTIONS menu)</i><br>]]></text>
+        </item>
+        <item id="3" time="11">
+          <text><![CDATA[Review glossary terms<br>]]></text>
+        </item>
+      </items>
+      <caption><![CDATA[This concludes the lesson. You should now take a moment to review the key points document. Key points documents are available from the OPTIONS menu. You may also wish to review glossary terms before proceeding with the knowledge check.]]></caption>
+    </page>
+    <page id="0560" images="1" file="l1_56_kcShell.swf">
+      <heading><![CDATA[Knowledge Check]]></heading>
+      <subHeading><![CDATA[ ]]></subHeading>
+      <items/>
+      <caption><![CDATA[]]></caption>
+      <navState><![CDATA[{"nextButton":{"enabled":false}}]]></navState>
+      <knowledgeCheck masteryScore="70" templateFile="questionTemplate.swf" encoded="false">
+        <question id="1">
+          <questionText><![CDATA[What is the Product Name?]]></questionText>
+          <answers>
+            <answer id="A" correct="true">
+              <answerText><![CDATA[Prescription Treatment brand Pro Control Plus]]></answerText>
+            </answer>
+            <answer id="B" correct="false">
+              <answerText><![CDATA[Total Release Aerosol Insecticide]]></answerText>
+            </answer>
+            <answer id="C" correct="false">
+              <answerText><![CDATA[Whitmire Micro-San]]></answerText>
+            </answer>
+            <answer id="D" correct="false">
+              <answerText><![CDATA[Pyrethrin]]></answerText>
+            </answer>
+          </answers>
+        </question>
+        <question id="2">
+          <questionText><![CDATA[What is the formulation of this product?]]></questionText>
+          <answers>
+            <answer id="A" correct="false">
+              <answerText><![CDATA[Prescription Treatment]]></answerText>
+            </answer>
+            <answer id="B" correct="true">
+              <answerText><![CDATA[Total Release Aerosol]]></answerText>
+            </answer>
+            <answer id="C" correct="false">
+              <answerText><![CDATA[Pro Control Plus]]></answerText>
+            </answer>
+            <answer id="D" correct="false">
+              <answerText><![CDATA[None of the above]]></answerText>
+            </answer>
+          </answers>
+        </question>
+        <question id="3">
+          <questionText><![CDATA[What is the the name of the producer of this pesticide?]]></questionText>
+          <answers>
+            <answer id="A" correct="false">
+              <answerText><![CDATA[Research Laboratories]]></answerText>
+            </answer>
+            <answer id="B" correct="false">
+              <answerText><![CDATA[Prescription Treatment Laboratories]]></answerText>
+            </answer>
+            <answer id="C" correct="true">
+              <answerText><![CDATA[Whitmire Micro-Gen Research Laboratories]]></answerText>
+            </answer>
+            <answer id="D" correct="false">
+              <answerText><![CDATA[None of the above]]></answerText>
+            </answer>
+          </answers>
+        </question>
+        <question id="4">
+          <questionText><![CDATA[Is the registrant of this pesticide also the producer?]]></questionText>
+          <answers>
+            <answer id="A" correct="true">
+              <answerText><![CDATA[Yes, since there is only one name in area 2.]]></answerText>
+            </answer>
+            <answer id="B" correct="false">
+              <answerText><![CDATA[No.  The party registering the pesticide is “A Prescription Treatment.”  The producer is Whitmire Micro-General Research Labs, Inc.]]></answerText>
+            </answer>
+            <answer id="C" correct="false">
+              <answerText><![CDATA[There is no registrant for this pesticide.]]></answerText>
+            </answer>
+            <answer id="D" correct="false">
+              <answerText><![CDATA[None of the above]]></answerText>
+            </answer>
+          </answers>
+        </question>
+        <question id="5">
+          <questionText><![CDATA[Do the net contents include the packaging and the container?]]></questionText>
+          <answers>
+            <answer id="A" correct="false">
+              <answerText><![CDATA[Yes, net contents includes everything.]]></answerText>
+            </answer>
+            <answer id="B" correct="true">
+              <answerText><![CDATA[No, it's the pesticide only, minus packaging and container.]]></answerText>
+            </answer>
+            <answer id="C" correct="false">
+              <answerText><![CDATA[No, it includes the pesticide and the container, but not the packaging.]]></answerText>
+            </answer>
+            <answer id="D" correct="false">
+              <answerText><![CDATA[No, it includes the pesticide and the packaging, but not the container.]]></answerText>
+            </answer>
+          </answers>
+        </question>
+        <question id="6">
+          <questionText><![CDATA[The Sun Valley Nursing Home is 15,000 cu. ft. of unobstructed space.  According to the label, one 6 oz. can of Pro-Control Plus treats up to 5,000 cu ft. of unobstructed space. How many cans of pesticide will you need to treat the whole nursing home?]]></questionText>
+          <answers>
+            <answer id="A" correct="false">
+              <answerText><![CDATA[1]]></answerText>
+            </answer>
+            <answer id="B" correct="false">
+              <answerText><![CDATA[2]]></answerText>
+            </answer>
+            <answer id="C" correct="true">
+              <answerText><![CDATA[3]]></answerText>
+            </answer>
+            <answer id="D" correct="false">
+              <answerText><![CDATA[4]]></answerText>
+            </answer>
+          </answers>
+        </question>
+        <question id="7">
+          <questionText><![CDATA[What is the EPA registration number?]]></questionText>
+          <answers>
+            <answer id="A" correct="false">
+              <answerText><![CDATA[EPA Est. No. 499-462]]></answerText>
+            </answer>
+            <answer id="B" correct="true">
+              <answerText><![CDATA[EPA Reg. No. 499-462]]></answerText>
+            </answer>
+            <answer id="C" correct="false">
+              <answerText><![CDATA[EPA Reg. No. 499-400]]></answerText>
+            </answer>
+            <answer id="D" correct="false">
+              <answerText><![CDATA[EPA Reg. No. 499-MO-1]]></answerText>
+            </answer>
+          </answers>
+        </question>
+        <question id="8">
+          <questionText><![CDATA[Your boss wants you to make an entry on the monthly inventory report.   Which number will you use for purposes of keeping inventory, report of usage, spills, or other incidents?]]></questionText>
+          <answers>
+            <answer id="A" correct="true">
+              <answerText><![CDATA[EPA Reg. No. 499-462]]></answerText>
+            </answer>
+            <answer id="B" correct="false">
+              <answerText><![CDATA[EPA Est. No. 499-MO-1]]></answerText>
+            </answer>
+            <answer id="C" correct="false">
+              <answerText><![CDATA[EPA Reg. No. 499-MO-1]]></answerText>
+            </answer>
+            <answer id="D" correct="false">
+              <answerText><![CDATA[None of the above]]></answerText>
+            </answer>
+          </answers>
+        </question>
+        <question id="9">
+          <questionText><![CDATA[The EPA needs to track the production of Pro-Control in Missouri.  Which number will the EPA use to track this data?]]></questionText>
+          <answers>
+            <answer id="A" correct="false">
+              <answerText><![CDATA[EPA Est. No. 499-462]]></answerText>
+            </answer>
+            <answer id="B" correct="false">
+              <answerText><![CDATA[EPA Reg. No. 499-462]]></answerText>
+            </answer>
+            <answer id="C" correct="false">
+              <answerText><![CDATA[EPA Reg. No. 499-MO-1]]></answerText>
+            </answer>
+            <answer id="D" correct="true">
+              <answerText><![CDATA[EPA Est. No. 499-MO-1]]></answerText>
+            </answer>
+          </answers>
+        </question>
+        <question id="10">
+          <questionText><![CDATA[Which one of the following is an active ingredient in Pro Control Plus?]]></questionText>
+          <answers>
+            <answer id="A" correct="false">
+              <answerText><![CDATA[Ether]]></answerText>
+            </answer>
+            <answer id="B" correct="true">
+              <answerText><![CDATA[Cyfluthrin]]></answerText>
+            </answer>
+            <answer id="C" correct="false">
+              <answerText><![CDATA[Arsenic]]></answerText>
+            </answer>
+            <answer id="D" correct="false">
+              <answerText><![CDATA[Water]]></answerText>
+            </answer>
+          </answers>
+        </question>
+        <question id="11">
+          <questionText><![CDATA[The inert ingredients in Pro-Control Plus total what percentage of the pesticide?]]></questionText>
+          <answers>
+            <answer id="A" correct="false">
+              <answerText><![CDATA[100%]]></answerText>
+            </answer>
+            <answer id="B" correct="false">
+              <answerText><![CDATA[95.4%]]></answerText>
+            </answer>
+            <answer id="C" correct="true">
+              <answerText><![CDATA[98.4%]]></answerText>
+            </answer>
+            <answer id="D" correct="false">
+              <answerText><![CDATA[70%]]></answerText>
+            </answer>
+          </answers>
+        </question>
+        <question id="12">
+          <questionText><![CDATA[Fellow pesticide applicator, Skeeter, complains that the Pro-Control Plus label fails to meet readability guidelines.  Which statement below is <u><i>NOT</i></u> a true EPA guideline for readability?]]></questionText>
+          <answers>
+            <answer id="A" correct="true">
+              <answerText><![CDATA[Written so only a trained pesticide applicator can understand it.]]></answerText>
+            </answer>
+            <answer id="B" correct="false">
+              <answerText><![CDATA[Words not crowded on the page.]]></answerText>
+            </answer>
+            <answer id="C" correct="false">
+              <answerText><![CDATA[Text is large enough to read easily.]]></answerText>
+            </answer>
+            <answer id="D" correct="false">
+              <answerText><![CDATA[Words are printed on a contrasting color background.]]></answerText>
+            </answer>
+          </answers>
+        </question>
+        <question id="13">
+          <questionText><![CDATA[Willie says that you should use your own intuition and experience when applying pesticides, as the label is only a guide.  Is he right?]]></questionText>
+          <answers>
+            <answer id="A" correct="false">
+              <answerText><![CDATA[Yes, Willie is right about this one.]]></answerText>
+            </answer>
+            <answer id="B" correct="true">
+              <answerText><![CDATA[No, the label is the law!]]></answerText>
+            </answer>
+            <answer id="C" correct="false">
+              <answerText><![CDATA[Maybe, I think it depends on which state you are in.]]></answerText>
+            </answer>
+            <answer id="D" correct="false">
+              <answerText><![CDATA[Yes, the label is only a guide if you are a CERTIFIED pest controller.]]></answerText>
+            </answer>
+          </answers>
+        </question>
+        <question id="14">
+          <questionText><![CDATA[The following statements claim to describe pesticide labels in general.   Which statement is FALSE?]]></questionText>
+          <answers>
+            <answer id="A" correct="false">
+              <answerText><![CDATA[A label must be EPA certified.]]></answerText>
+            </answer>
+            <answer id="B" correct="false">
+              <answerText><![CDATA[Pesticides must be applied in accordance with the label.]]></answerText>
+            </answer>
+            <answer id="C" correct="true">
+              <answerText><![CDATA[Labels are relatively cheap to produce.]]></answerText>
+            </answer>
+            <answer id="D" correct="false">
+              <answerText><![CDATA[Additional copies of a label can be obtained from the manufacturer upon request.]]></answerText>
+            </answer>
+          </answers>
+        </question>
+        <question id="15">
+          <questionText><![CDATA[Why is it critically important to read labels carefully before preparing for a pesticide application mission?]]></questionText>
+          <answers>
+            <answer id="A" correct="false">
+              <answerText><![CDATA[Your annual rating and pay is based on your ability to read labels.]]></answerText>
+            </answer>
+            <answer id="B" correct="false">
+              <answerText><![CDATA[The fire marshall requires that we apply pesticide in accordance with the label.]]></answerText>
+            </answer>
+            <answer id="C" correct="false">
+              <answerText><![CDATA[By reading labels we show that this is a professional career field with its own requirements.]]></answerText>
+            </answer>
+            <answer id="D" correct="true">
+              <answerText><![CDATA[Labels are a critical tool in avoiding mishaps.]]></answerText>
+            </answer>
+          </answers>
+        </question>
+        <question id="16">
+          <questionText><![CDATA[What is the chief cause of pesticide problems?]]></questionText>
+          <answers>
+            <answer id="A" correct="false">
+              <answerText><![CDATA[Disagreements between certified applicators and those they supervise.]]></answerText>
+            </answer>
+            <answer id="B" correct="false">
+              <answerText><![CDATA[Manufacturers who fail to provide additional labels when requested.]]></answerText>
+            </answer>
+            <answer id="C" correct="false">
+              <answerText><![CDATA[Labels written in print too small to be read.]]></answerText>
+            </answer>
+            <answer id="D" correct="true">
+              <answerText><![CDATA[Applications made contrary to the directions on the label.]]></answerText>
+            </answer>
+          </answers>
+        </question>
+      </knowledgeCheck>
+    </page>
+  </lco>
+</lcoData>

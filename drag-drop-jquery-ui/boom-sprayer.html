@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #E5F4DE;
+            width: 795px;
+            height: 525px;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: #396337;
+            font-weight: bold; 
+            overflow: hidden;           
+        }   
+
+        h1 {
+            font-size: 24px;
+            letter-spacing: 1px;
+            color: #396337;
+            margin-bottom: 5px;            
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-top: 0;
+            color: #8D9245;
+        }
+
+        .instruction-text {
+            margin-right: 25px;
+        }
+
+        header { margin-left: 25px; }
+
+        #container,
+        .flex-container,
+        .left-container,
+        .right-container {
+            height: 100%;
+        }
+
+        #container {
+            overflow: hidden;
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+ 
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .left-container { width: 773px; }
+
+        /* .right-container { width: 200px; } */
+
+        .container {
+            border: 5px solid black;            
+            border-radius: 10px;
+            /* width: 515px; */
+            margin-top: 8%;
+            /* margin-left: 18px; */
+            padding: 5px;
+            
+            background: #e2e2e2; 
+            background: -moz-linear-gradient(top,  #e2e2e2 0%, #dbdbdb 20%, #d1d1d1 100%, #fefefe 100%, #d1d1d1 100%); 
+            background: -webkit-linear-gradient(top,  #e2e2e2 0%,#dbdbdb 20%,#d1d1d1 100%,#fefefe 100%,#d1d1d1 100%); 
+            background: linear-gradient(to bottom,  #e2e2e2 0%,#dbdbdb 20%,#d1d1d1 100%,#fefefe 100%,#d1d1d1 100%); 
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#d1d1d1',GradientType=0 ); 
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .drop-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .drag-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .dragging {
+            box-shadow: 5px 5px 2px #333;
+            margin: 0;
+        }
+
+        .dropped { cursor: none; }
+
+        .draggable-item-1 {
+            background: url("./images/page33/close_ground.png");
+        }
+
+        .draggable-item-2 {
+            background-image: url("./images/page33/far_ground.png");
+        }
+
+        .draggable-item-3 {
+            background: url("./images/page33/one_close.png");
+        }
+
+        .draggable-item-4 {
+            background: url("./images/page33/one_far.png");
+        }
+
+        .draggable-item-5 {
+            background: url("./images/page33/nozzle_hollowed.png");
+        }
+
+        .draggable-item-6 {
+            background: url("./images/page33/nozzle_clogged.png");
+        }
+        
+
+        .draggable-item {
+            border: 1px solid black;
+            width: 120px;
+            height: 98px;
+            margin: 15px 0 15px;            
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            cursor: pointer;
+        }
+
+        .draggable-item img,
+        .droppable-item {
+             width: 100%; 
+        }
+
+        .droppable-item {
+            border: 2px dotted black;
+            width: 120px;
+            height: 98px;
+            margin: 15px 0 6px;            
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .drop-text {
+            font-size: 12px;
+            width: 120px;
+            text-align: center;
+        }
+
+    </style>
+    <script src="dist/js/jquery-1.12.4.js"></script>
+    <script src="dist/js/jquery-ui.js"></script>    
+</head>
+<body>
+
+    <div id="container">
+        <div class="flex-container">
+            <div class="left-container">
+                <header>
+                    <h1 id="heading"></h1>
+                    <h2 id="sub-heading"></h2>
+                    <div id="instruction-text" class="instruction-text"></div>        
+                </header>
+            
+                <div  class="container">
+                    <div class="drop-container">
+                        <div>
+                            <div class="droppable-item"></div>
+                            <div class="drop-text">Over spray on one side of the sprayer where spray patterns overlap too much, bands of very heavy spray</div>
+                        </div>
+                        <div>
+                            <div class="droppable-item"></div>
+                            <div class="drop-text">Gap in spray pattern</div>
+                        </div>
+                        <div>
+                            <div class="droppable-item"></div>
+                            <div class="drop-text">Under spray on one side where patterns don't overlap</div>
+                        </div>
+                        <div>
+                            <div class="droppable-item"></div>
+                            <div class="drop-text">Over spray where spray patterns overlap, bands where spray is too heavy</div>
+                        </div>
+                        <div>
+                            <div class="droppable-item"></div>
+                            <div class="drop-text">Underspray where patterns don't overlap</div>
+                        </div>
+                        <div>
+                            <div class="droppable-item"></div>
+                            <div class="drop-text">Overspray under some nozzles and consequent uneven distribution</div>
+                        </div>
+
+
+                    </div> 
+                    <div id="drag-container" class="drag-container">
+                        <div class="draggable-item draggable-item-1"></div>
+                        <div class="draggable-item draggable-item-2"></div>
+                        <div class="draggable-item draggable-item-3"></div>
+                        <div class="draggable-item draggable-item-4"></div>
+                        <div class="draggable-item draggable-item-5"></div>
+                        <div class="draggable-item draggable-item-6"></div>                        
+                    </div>
+
+                </div>
+                
+                <div class="correct-container" id="correct-container">
+  
+                    </div>
+                </div>
+            </div>
+             
+            <!-- <div class="right-container">
+                <div class="drop-container drop-container-1">
+                    <img src="images/page21/soldier.png" alt="">
+                </div>
+    
+                <div class="drop-container drop-container-2">
+                    <img src="images/page21/bed.jpg" alt="">
+                </div>
+            </div> -->
+        </div>
+    </div>    
+
+    <script> 
+        var heading = "DRAG AND DROP";
+        var subText = "CONSEQUENCES OF INCORRECT SETUP";
+        var instructions = "";        
+
+        var correctCount = 6; 
+
+        var dropMatch_1 = ["draggable_3"];
+        var dropMatch_2 = ["draggable_6"]; 
+        var dropMatch_3= ["draggable_4"];
+        var dropMatch_4 = ["draggable_1"];  
+        var dropMatch_5 = ["draggable_2"];  
+        var dropMatch_6 = ["draggable_5"];       
+
+        // Change code above
+
+        var matchCount = 0;
+
+        var instructionText = document.getElementById("instruction-text");
+        var headingText = document.getElementById("heading");
+        var subHeading = document.getElementById("sub-heading");
+        var draggables = document.querySelectorAll(".draggable-item");
+        var droppables = document.querySelectorAll(".droppable-item");        
+        var dragContainer = document.getElementById("drag-container");
+        var correctContainer = document.getElementById("correct-container");
+
+        correctContainer.style.display = "none";
+
+        var dragsArray = Array.prototype.slice.call(draggables);
+        var dropsArray = Array.prototype.slice.call(droppables);
+        headingText.textContent = heading;
+        subHeading.textContent = subText;
+        instructionText.textContent = instructions;
+
+        var matchArray = [
+            dropMatch_1, 
+            dropMatch_2, 
+            dropMatch_3,
+            dropMatch_4,
+            dropMatch_5,
+            dropMatch_6    
+        ];
+
+        dragsArray.forEach(function (draggable, idx) {
+            draggable.id = "draggable_" + (idx + 1);            
+
+            $("#" + draggable.id).draggable({
+                containment: "#container",
+                revert: true,
+                start: startDrag,
+                stop: stopDrag
+            });
+        });
+
+        dropsArray.forEach(function (droppable, idx) {
+            droppable.id = "droppable_" + (idx + 1);  
+            
+            droppable.accept = matchArray[idx];
+            
+            $("#" + droppable.id).droppable({
+                drop: dropItem
+            });            
+        });
+
+        function startDrag (event, ui) {
+            $(this).addClass('dragging');  
+        }
+
+        function stopDrag (event, ui) {
+            $(this).removeClass('dragging');  
+        }
+
+        function dropItem (event, ui) {
+            var draggable = ui.draggable;
+            var draggableId = draggable[0].id;
+            var droppable = this;
+            
+            if (checkMatch(droppable.accept, draggableId)) {
+                setDrop(draggable, droppable);
+            }
+
+            if (matchCount >= correctCount) {
+                complete(draggable, droppable);
+            } 
+            
+        }
+
+        function checkMatch (array, draggableId) {
+            var match = array.some(function (arrayVal) {
+                return arrayVal === draggableId;
+            });
+
+            if (match) {
+                matchCount++
+                return true;
+            }
+        }
+
+        // function incorrectMatch () {
+        //     $("#droppable_1 img").attr("src", "images/page21/soldier-wrong.png");
+            
+        //     $("#droppable_1 img").effect( "shake", {times:4, distance: 5}, 1000, function() {
+        //         $("#droppable_1 img").attr("src", "images/page21/soldier.png");
+        //     });
+        // }
+
+        function setDrop (draggable, droppable) {            
+            var draggableItem = draggable[0];
+            console.log(draggable.css("background-image"))
+            draggableItem.style.visibility = "hidden";
+            draggableItem.classList.add("dropped");
+            droppable.style.backgroundImage = draggable.css("background-image");
+            droppable.style.border = "1px solid black";           
+        }
+
+        function complete(draggable, droppable) {
+            dragsArray.forEach(function (drag) {
+                    $("#" + drag.id).draggable('disable');
+                    drag.style.cursor = "default";
+            });
+
+            
+            // dragContainer.style.display = "none";
+            // correctContainer.style.display = "block";
+
+            instructionText.textContent = "Congratulations!!! Click next to continue";
+
+            parent.enableFF();
+
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,1 @@
+Used to automatically insert script tag for sound functions in FLA frame 1.

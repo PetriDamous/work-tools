@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #E5F4DE;
+            width: 795px;
+            height: 525px;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #396337;
+            font-weight: bold; 
+            overflow: hidden;           
+        }   
+
+        h1 {
+            font-size: 24px;
+            letter-spacing: 1px;
+            color: #396337;
+            margin-bottom: 5px;            
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-top: 0;
+            color: #8D9245;
+        }
+
+        .instruction-text {
+            font-size: 14px;
+            margin-right: 25px;
+        }
+
+        header {
+            margin-left: 25px;
+        }
+
+        .table-droppables,
+        .table-draggables {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+        }
+
+        .row {
+            display: flex;
+            min-height: 50px;
+        }
+
+        .row-top {
+            color: #fff;
+            background-color: #396337;
+        }
+
+        .cell {
+            flex: 1;            
+            border: 1px solid black;
+            text-align: center;
+            width: 0;
+        }
+
+        .cell-droppable {
+            min-height: 127px;
+        }
+
+        .cell-draggable {
+            min-height: 115px;
+        }
+
+        .cell-draggable span {
+            cursor: pointer;
+        }
+
+        .cell-draggable p {
+            margin-left: 3px;
+            margin-right: 3px;
+        } 
+
+        .table-droppables {
+            width: 98%;
+            margin: 0 auto;
+        } 
+
+        .dragging {
+            text-shadow: 1px 1px 2px #333;
+        
+        } 
+
+        .dropped {
+            cursor: none;
+
+        }
+
+        .d-flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #container {
+            overflow: hidden;
+        } 
+
+ 
+
+    </style>
+    <script src="dist/js/jquery-1.12.4.js"></script>
+    <script src="dist/js/jquery-ui.js"></script>    
+</head>
+<body>
+    <header>
+        <h1>POP QUESTION</h1>
+        <div class="d-flex">
+            <h2 id="sub-heading"></h2>
+            <div id="instruction-text" class="instruction-text"></div> 
+        </div>
+        
+    </header>
+
+    <div id="container">
+        <section class="table-droppables">
+            <div class="row row-top">
+                <div class="cell"><p>Disease</p></div>
+                <div class="cell"><p>Pathogen</p></div>
+                <div class="cell"><p>Vector</p></div>
+                <div class="cell"><p>Chain of Infection (Mosquito to Humans)</p></div>
+                <div class="cell"><p>Chain of Infection (Mosquito to Various Species)</p></div>
+                <div class="cell"><p>Worldwide Impact</p></div>
+                <div class="cell"><p>Military Importance (High/Low)</p></div>
+                <div class="cell"><p>Control</p></div>
+            </div>
+    
+            <div class="row">
+                <!-- Disease -->
+                <div class="cell cell-droppable"><p>Malaria</p></div>
+                <!-- Pathogen -->
+                <div class="cell cell-droppable"></div>
+                <!-- Vector -->
+                <div class="cell cell-droppable"></div>
+                <!-- Chain of Infection (Human) -->
+                <div class="cell cell-droppable"><p>Humans</p></div>
+                <!-- Chain of Infectoion (Sepcies) -->
+                <div class="cell cell-droppable"><p></p>N/A</div>
+                <!-- World Wide Impact -->
+                <div class="cell cell-droppable"><p>Tremendous; millions of deaths per year</p></div>
+                <!-- Military Importance -->
+                <div class="cell cell-droppable"></div>
+                <!-- Control -->
+                <div class="cell cell-droppable"></div>
+            </div>
+        </section>
+    
+        <br>        
+
+        <section class="table-droppables">
+            <div class="row row-top">
+                <div class="cell"><p>Pathogen</p></div>
+                <div class="cell"><p>Main Vector</p></div>
+                <div class="cell"><p>Military Importance </p></div>
+                <div class="cell"><p>Control</p></div>
+            </div>
+            
+            <div class="row">
+                <div class="cell cell-draggable">
+                    <p><span>a. Virus</span></p>
+                    <p><span>b. Bacteria</span></p>
+                    <p><span>c. Nematode worm</span></p>
+                    <p><span>d. Protozoan</span></p>                
+                </div>
+                <div class="cell cell-draggable">
+                    <p><span>a. Tick</span></p>
+                    <p><span>b. Anopheles mosquito</span></p>
+                    <p><span>c. Aedes mosquito</span></p>
+                    <p><span>d. Culex mosquito</span></p>
+                </div>
+                <div class="cell cell-draggable">
+                    <p><span>a. High</span></p>
+                    <p><span>b. Low</span></p>
+                    <p><span>c. Insignificant</span></p>
+                </div>
+                <div class="cell cell-draggable">
+                    <p><span>a. Vaccine</span></p>                    
+                    <p><span>b. Prophylaxis</span></p>
+                    <p><span>c. Vector control</span></p>
+                    <p><span>d. Protective Measures</span></p>
+                </div>
+            </div>        
+        </section>
+    </div>
+
+    <script> 
+
+        var subText = "Malaria. Transmission, Impact, Control";
+        var instructions = "(Drag the choices that apply onto the table blow.)";
+        
+
+        var correctCount = 6;        
+
+        var dropMatch_1 = [];
+        var dropMatch_2 = ["draggable_4"];
+        var dropMatch_3 = ["draggable_6"];
+        var dropMatch_4 = [];
+        var dropMatch_5 = [];
+        var dropMatch_6 = [];
+        var dropMatch_7 = ["draggable_9"];
+        var dropMatch_8 = ["draggable_13", "draggable_14", "draggable_15"];
+
+        // Change code above
+
+        var matchCount = 0;
+
+        var instructionText = document.getElementById("instruction-text");
+        var subHeading = document.getElementById("sub-heading");
+        var draggables = document.querySelectorAll(".cell-draggable span");
+        var droppables = document.querySelectorAll(".cell-droppable");
+
+        var dragsArray = Array.prototype.slice.call(draggables);
+        var dropsArray = Array.prototype.slice.call(droppables);
+
+        subHeading.textContent = subText;
+        instructionText.textContent = instructions;
+
+        var matchArray = [dropMatch_1, dropMatch_2, dropMatch_3, dropMatch_4, dropMatch_5, dropMatch_6, dropMatch_7, dropMatch_8];
+
+        dragsArray.forEach(function (draggable, idx) {
+            draggable.id = "draggable_" + (idx + 1);            
+
+            $("#" + draggable.id).draggable({
+                containment: "#container",
+                revert: true,
+                start: startDrag,
+                stop: stopDrag
+            });
+        });
+
+        dropsArray.forEach(function (droppable, idx) {
+            droppable.id = "droppable_" + (idx + 1);  
+            
+            droppable.accept = matchArray[idx];
+            
+            $("#" + droppable.id).droppable({
+                drop: dropItem
+            });            
+        });
+
+        function startDrag (event, ui) {
+            $(this).addClass('dragging');  
+        }
+
+        function stopDrag (event, ui) {
+            $(this).removeClass('dragging');  
+        }
+
+        function dropItem (event, ui) {
+            var draggable = ui.draggable;
+            var draggableId = draggable[0].id;
+            var droppable = this;
+
+            if (checkMatch(droppable.accept, draggableId)) {
+                setDrop(draggable, droppable);
+            }
+
+            if (matchCount >= correctCount) {
+                complete(draggable, droppable);
+            } 
+            
+        }
+
+        function checkMatch (array, draggableId) {
+            var match = array.some(function (arrayVal) {
+                return arrayVal === draggableId;
+            });
+
+            if (match) {
+                matchCount++
+                return true;
+            }
+        }
+
+        function setDrop (draggable, droppable) {            
+            var draggableItem = draggable[0];            
+            var dropItem = document.createElement("p");
+
+            $(dropItem).css({"margin-left" : "3px","margin-right" : "3px"});                 
+            dropItem.textContent = draggableItem.outerText;
+            $(droppable).append(dropItem);
+            draggableItem.style.visibility = "hidden";
+            draggableItem.classList.add("dropped");           
+        }
+
+        function complete(draggable, droppable) {
+            dragsArray.forEach(function (drag) {
+                    $("#" + drag.id).draggable('disable');
+                    drag.style.cursor = "default";
+            });
+
+            instructionText.textContent = "Congratulations!!! Click next to continue";
+
+            console.log("You comppleted this shit")
+
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,17 @@
+/*.bg-success { background-color: #567241!important; } */
+.card-header { color:#FFF!important;font-size:22px;background-color: #567241!important; }
+.card-header-a { color:#333!important;font-size:22px;background-color: #ffd28c!important;padding:5px; }
+.card-footer-a { color:#333!important;font-size:18px;background-color:#ffd28c!important;min-height:30px; }
+.list-group-item { background-color:#f4fced!important; }
+.card-body { background-color:#FFF!important; }
+.bg-warning {  background-color:#ffd28c!important; }
+
+.cardSet1 { background-color: #699999; }
+.cardSet2 { background-color: #cc9999; }
+.cardSet3 { background-color: #cc9966; }
+.card { border: 1px solid rgba(0,0,0,.125); border-radius: 5px; padding: 5px;}
+h3.card-title { font-size: 1.2rem }
+h5.card-subtitle { font-size: .8rem }
+p.card-text { padding-bottom: 0.6rem; line-height: 1.2rem; }
+a.btn-dark { background-color:#333; color:#FFF; width: 120px; }
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload version 2.5.6 SCORM 2004 Content Package document-->
+<!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:imsmd="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" identifier="MANIFEST-17195D1AC995842E398217566C899702" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://ltsc.ieee.org/xsd/LOM lom.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>2004 3rd Edition</schemaversion>
+  </metadata>
+  <organizations default="ORG-5FE7F5A5F8992BB417B12411AA2E64BF">
+    <organization identifier="ORG-5FE7F5A5F8992BB417B12411AA2E64BF" structure="hierarchical">
+      <title>STI Example</title>
+      <item identifier="ITEM-FCAE7B2E57EA3E027C8EB5195CBFC505" identifierref="RES-25983A979698B5AD108836295F8E7FBE" isvisible="true">
+        <title>Lesson 01</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-25983A979698B5AD108836295F8E7FBE" adlcp:scormType="sco" type="webcontent" href="index.html">
+      <file href="index.html" />
+    </resource>
+    <resource identifier="RES-61E574D86D2F5564AC3A94633C99C50F" adlcp:scormType="sco" type="webcontent" href="page1.html">
+      <file href="page1.html" />
+      <file href="dist/css/bootstrap.min.css" />
+      <file href="favicon.ico" />
+    </resource>
+    <resource identifier="RES-18A334A85EAD999844D86E92BC902E59" adlcp:scormType="sco" type="webcontent" href="page2.html">
+      <file href="page2.html" />
+      <file href="dist/css/bootstrap.min.css" />
+      <file href="favicon.ico" />
+    </resource>
+    <resource identifier="RES-DCF374C4DE80006BBEE8DD5719D20A31" adlcp:scormType="sco" type="webcontent" href="page3.html">
+      <file href="page3.html" />
+      <file href="dist/css/bootstrap.min.css" />
+      <file href="favicon.ico" />
+    </resource>
+    <resource identifier="RES-05A8ADB3F6E03EB205F13C7DD10BF5DD" adlcp:scormType="sco" type="webcontent" href="page4.html">
+      <file href="page4.html" />
+      <file href="dist/css/bootstrap.min.css" />
+      <file href="favicon.ico" />
+    </resource>
+  </resources>
+</manifest>
+

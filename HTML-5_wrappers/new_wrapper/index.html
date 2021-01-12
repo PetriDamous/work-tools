@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>Pest Management</title>
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/navbar.css" rel="stylesheet">
+    <script src="shared/scormfunctions.js" type="text/javascript"></script>
+  <style>
+    #mnBTN, #ppBTN, #ccBTN, #muBTN, #glBTN, #opBTN, #nxBTN, #prBTN:hover  {
+      cursor: pointer;
+      z-index:1;
+    }
+
+    /*.ui-autocomplete-loading {
+        background: white url("images/ui-anim_basic_16x16.gif") right center no-repeat;
+  }*/
+  .ui-autocomplete {
+    max-height: 350px;
+    max-width: 650px;
+    overflow-y: auto;
+    z-index:3;
+    background-color: #B0B19B;
+    color: #FFF;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+  }
+  .ui-helper-hidden-accessible{
+    display: none;
+  }
+  /* IE 6 doesn't support max-height
+   * we use height instead, but this forces the menu to always be this tall
+   */
+  * html .ui-autocomplete {
+    height: 100px;
+  }
+  #btnExit{
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color:#E5F4DE;
+    font-size:12px;
+    float:right;
+    margin-top:13px;
+    margin-left:-50px;
+  }
+  </style>
+  </head>
+  <body onload="" onbeforeunload="doUnload(false);" onunload="doUnload();">
+    <div class="container" style="width:795px;height:628px;padding:0px;overflow:hidden;">
+      <div id="top-nav" style="background-image:url(images/top.png);position:absolute;background-repeat:no-repeat;height:46px;width:795px;overflow:hidden;z-index:1;"><span id="title-text">Formulations</span><span id="title-subtext"></span><span><button id="btnExit">EXIT</button></span></div>
+      <div class="jumbotron" style="margin-left:0px;position:absolute;width:795px!important;height:525px;overflow:hidden;z-index:0;padding-top:0px;padding:0px;margin-top:46px;border-radius:0px;">
+        <!--<div>-->
+        <span id="spinner"></span>
+        <iframe class="embed-responsive-item" id="Stage" scrolling="no" src="startbutton.html" frameborder="0" style="width:795px;min-height:525px;margin-left:0px;margin-top:0px;"></iframe>
+      </div>
+    <footer>
+        <!--<progress id="progBar" class="meter orange nostripes" value="1" max="100" style="width:100%;height:17px;background-color:#FFF;border-style:none;border-radius:3px;">
+        </progress>-->
+        <div id="bottom-nav" style="background-image:url(images/bottom.png);position:absolute;background-repeat:no-repeat;height:57px;width:795px;overflow:hidden;margin-top:571px;margin-left:0px;border: 1px solid #227C33;z-index:2;">
+        <span class="btn-group-left">
+        <button id="btnMenu" class="btn btn-sm btn-default" style="margin-top:0px;margin-left:20px;background:transparent;border:0;z-index:3!important;" title="menu"><img id="mnBTN" src="images/buttons/menu_on.png"></button>
+        <button id="btnCC" class="btn btn-sm btn-default" style="margin-top:0px;margin-left:15px;background:transparent;border:0;" title="closed caption"><img  id="ccBTN" src="images/buttons/cc_on.png"></button>
+        <button id="btnGlossary" class="btn btn-sm btn-default" style="margin-top:0px;margin-left:12px;background:transparent;border:0;" title="glossary"><img id="glBTN" src="images/buttons/glossary_on.png"></button>
+        <button id="btnOptions" class="btn btn-sm btn-default"  style="margin-top:0px;margin-left:13px;background:transparent;border:0;" title="options"><img id="opBTN" src="images/buttons/options_on.png"></button>
+        <button id="middle-text" style="margin-top:0px;margin-left:25px;" disabled>Counter</button>
+        </span>
+        <span id="nav-text" class="middle-nav-text">
+        </span>
+        <span class="btn-group-right">
+        <button id="btnAudio" class="btn btn-sm btn-default" style="margin-top:0px;margin-left:25px;background:transparent;border:0;" onclick="doMute();" title="mute"><img id="muBTN" src="images/buttons/mute_on.png"></button>
+        <button id="btnPause" class="btn btn-sm btn-default" style="margin-top:0px;margin-left:8px;background:transparent;border:0;" onclick="checkAudio();" title="pause/play"><img id="ppBTN" src="images/buttons/play_on.png"></button>
+        <!--<button id="txtCounter" class="button1" title="counter" disabled></button>-->
+        <!--<button id="btnPDF" class="btn btn-sm btn-default" onclick="pdfPage();" title="PDF Transcript"><span class="glyphicon glyphicon-folder-open" aria-hidden="true" aria-label="PDF files"></span></button>-->
+        <button id="btnPrev" class="btn btn-sm-right btn-default" style="margin-top:0px;margin-left:5px;background:transparent;border:0;" onclick="doPrevious();" title="previous"><img id="prBTN" src="images/buttons/back_on.png" onmouseover="this.src='images/buttons/back_hover.png';" onmouseout="this.src='images/buttons/back_on.png';"></button>
+        <!--<button id="btnReplay" class="btn btn-sm-right btn-default" onclick="doRefresh();" title="replay"><span class="glyphicon glyphicon-refresh" aria-hidden="true" aria-label="replay"></span></button>-->
+        <button id="btnFF" class="btn btn-sm-right btn-default" style="margin-top: 0px;margin-left:0px;background:transparent;border:0;" onclick="doNext();" title="next"><img id="nxBTN" src="images/buttons/next_on.png" onmouseover="this.src='images/buttons/next_hover.png';" onmouseout="this.src='images/buttons/next_on.png';"></button>
+        <!--<button id="btnExit" class="btn btn-sm btn-default" onclick="doExit();" title="close"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" aria-label="close"></span></button>-->
+        </span>
+        </div>
+    </footer>
+    <div id="TOC" class="animate-bottom" style="overflow-y:scroll;overflow-x:hidden;"></div>
+    <div id="cc_Text" class="animate-bottom" style="overflow-y:auto;overflow-x:hidden;"></div>
+    <div id="Options" class="animate-bottom" style="overflow-y:scroll;overflow-x:hidden;"></div>
+    <div id="Glossary" class="animate-bottom" style="overflow-y:hidden;overflow-x:hidden;"></div>
+    </div>
+    <script>
+    </script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="dist/jquery/jquery-3.2.1.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="dist/js/bootstrap.js"></script>
+    <script src="dist/js/buttons.js"></script>
+    <script src="dist/js/pages.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+    <script>
+     /* $('#btnCC').click(function() {
+	var modalDiv = $('#cc_Text');
+  modalDiv.modal({backdrop: false, show: true});
+    
+  $('.modal-dialog').draggable({
+    handle: ".modal-header"
+  });
+});*/
+    </script>
+  </body>
+</html>
